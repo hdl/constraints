@@ -1,0 +1,6 @@
+label: iCEstick Evaluation Kit
+device: HX1K
+doc:
+  - http://www.latticesemi.com/icestick
+prog:
+  - iceprog

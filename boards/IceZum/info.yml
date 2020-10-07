@@ -1,0 +1,6 @@
+label: IceZUM Alhambra
+device: HX1K
+doc:
+  - https://github.com/FPGAwars/icezum
+prog:
+  - iceprog

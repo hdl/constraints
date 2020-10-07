@@ -1,0 +1,6 @@
+label: iCE40-HX8K Breakout Board
+device: HX8K
+doc:
+  - http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/iCE40HX8KBreakoutBoard
+prog:
+  - iceprog

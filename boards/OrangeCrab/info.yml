@@ -1,0 +1,6 @@
+label: OrangeCrab-r02-25F
+device: ECP5
+doc:
+  - https://github.com/gregdavill/OrangeCrab
+prog:
+  - openocd
