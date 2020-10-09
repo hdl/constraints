@@ -34,7 +34,27 @@ Find examples in the following repositories:
 
 ## References
 
-- [PoC](https://github.com/VLSI-EDA/PoC/) has a large collection of constraint files for Xilinx ISE/Vivado and Intel/Altera's Quartus-II. The initial commit of this repository imported most of the content from [VLSI-EDA/PoC: ucf/](https://github.com/VLSI-EDA/PoC/tree/master/ucf).
-- [INTI-CMNB-FPGA/fpga_lib](https://github.com/INTI-CMNB-FPGA/fpga_lib) contains some YAML files that use a custom format: [INTI-CMNB-FPGA/fpga_lib: boards/](https://github.com/INTI-CMNB-FPGA/fpga_lib/tree/master/boards). A Python script ([boardfiles.py](https://github.com/INTI-CMNB-FPGA/fpga_lib/blob/master/scripts/boardfiles.py)) allows generating UCF files from the YAML sources.
-- `*.pcf` and `*.lpf` files for open source boards were picked from [eine/vhdl-cfg](https://github.com/eine/vhdl-cfg/), which are based on resources from [ghdl/ghdl-yosys-plugin](https://github.com/ghdl/ghdl-yosys-plugin), [antonblanchard/ghdl-yosys-blink](https://github.com/antonblanchard/ghdl-yosys-blink), [im-tomu/fomu-workshop](https://github.com/im-tomu/fomu-workshop), etc.
-- [olofk/fusesoc](https://github.com/olofk/fusesoc) proposes an open source YAML format for defining cores. Hence, the constrains provided in this repository are expected to be used in those core definition sources. Ideally, fusesoc might import the YAML definition, instead of defining different filesets for each tool.
+### VLSI-EDA/PoC
+
+[PoC](https://github.com/VLSI-EDA/PoC/) has a large collection of constraint files for Xilinx ISE/Vivado and Intel/Altera's Quartus-II. The initial commit of this repository imported most of the content from [VLSI-EDA/PoC: ucf/](https://github.com/VLSI-EDA/PoC/tree/master/ucf).
+
+### INTI-CMNB-FPGA/fpga_lib
+
+[fpga_lib](https://github.com/INTI-CMNB-FPGA/fpga_lib) contains some YAML files that use a custom format: [INTI-CMNB-FPGA/fpga_lib: boards/](https://github.com/INTI-CMNB-FPGA/fpga_lib/tree/master/boards). A Python script ([boardfiles.py](https://github.com/INTI-CMNB-FPGA/fpga_lib/blob/master/scripts/boardfiles.py)) allows generating UCF files from the YAML sources.
+
+### eine/vhdl-cfg
+
+`*.pcf` and `*.lpf` files for open source boards were picked from [vhdl-cfg](https://github.com/eine/vhdl-cfg/), which are based on resources from [ghdl/ghdl-yosys-plugin](https://github.com/ghdl/ghdl-yosys-plugin), [antonblanchard/ghdl-yosys-blink](https://github.com/antonblanchard/ghdl-yosys-blink), [im-tomu/fomu-workshop](https://github.com/im-tomu/fomu-workshop), etc.
+
+### litex-hub/litex-boards
+
+[litex-boards](https://github.com/litex-hub/litex-boards) is equivalent to this repository, but constraints are defined as Python modules. It'd be interesting to allow conversions between the YAML and LiteX board definitions. At the same time, from LiteX definitions it should be possible to generate vendor constraint files matching the guidelines.
+
+### SymbiFlow/yosys-symbiflow-plugins
+
+[yosys-symbiflow-plugins](https://github.com/SymbiFlow/yosys-symbiflow-plugins) contains plugins for Yosys developed as part of the [SymbiFlow](https://github.com/SymbiFlow) project. Some of those plugins are the `xdc-plugin` or the `sdc-plugin`. Those take the constraints and information and converts them to annotations on RTL. Annotations can also be directly provided in HDL too. Hence, the aim is to collect everything into the RTL and then write the data back for downstream tools to use. The main benefit of this approach is using the names in RTL, instead of dealing with mangled names after optimisation. See also [XDC commands supported by SymbiFlow Yosys Plugins](https://docs.google.com/spreadsheets/d/1G-E2Dq8YG4g9Z6mTygpumwlI_vNlFUQinc9gMgePfec/edit#gid=80555131) and [Yosys and Constraints System](https://docs.google.com/drawings/d/1r2LXypJF5AD40LfHegml3_fIvPT2jZ3n2OZYW9-9dLU/edit).
+
+### olofk/fusesoc
+
+[fusesoc](https://github.com/olofk/fusesoc) proposes an open source YAML format for defining cores. Hence, the constrains provided in this repository are expected to be used in those core definition sources. Ideally, fusesoc might import the YAML definition, instead of defining different filesets for each tool.
+
