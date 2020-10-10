@@ -58,3 +58,7 @@ Find examples in the following repositories:
 
 [fusesoc](https://github.com/olofk/fusesoc) proposes an open source YAML format for defining cores. Hence, the constrains provided in this repository are expected to be used in those core definition sources. Ideally, fusesoc might import the YAML definition, instead of defining different filesets for each tool.
 
+### Xilinx/XilinxBoardStore
+
+The board data files used with Xilinx Vivado are hosted at [Xilinx/XilinxBoardStore](https://github.com/Xilinx/XilinxBoardStore).
+
