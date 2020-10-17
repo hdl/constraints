@@ -1,0 +1,6 @@
+label: TinyFPGA BX
+device: LP8K
+doc:
+  - https://github.com/tinyfpga/TinyFPGA-BX
+prog:
+  - serial
