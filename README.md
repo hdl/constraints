@@ -30,6 +30,7 @@ The recommended approach for using these constraints in an existing HDL design i
 Find examples in the following repositories:
 
 - [PLC2/Solution-StopWatch](https://github.com/PLC2/Solution-StopWatch)
+- [dbhi/vboard](https://github.com/dbhi/vboard)
 - [eine/vhdl-cfg](https://github.com/eine/vhdl-cfg/)
 
 ## References
