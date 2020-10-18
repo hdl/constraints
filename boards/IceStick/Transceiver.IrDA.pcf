@@ -1,0 +1,4 @@
+#> IrDA
+set_io --warn-no-port IR_TX 105
+set_io --warn-no-port IR_RX 106
+set_io --warn-no-port IR_SD 107

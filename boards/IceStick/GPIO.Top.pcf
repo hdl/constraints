@@ -1,0 +1,12 @@
+#> I/O
+#          7    6    5    4    3    2    1    0
+# TOP  | 119  118  117  116  115  114  113  112  GND  3V3 | <
+
+set_io --warn-no-port TR0 112
+set_io --warn-no-port TR1 113
+set_io --warn-no-port TR2 114
+set_io --warn-no-port TR3 115
+set_io --warn-no-port TR4 116
+set_io --warn-no-port TR5 117
+set_io --warn-no-port TR6 118
+set_io --warn-no-port TR7 119

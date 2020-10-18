@@ -1,0 +1,18 @@
+#> PMOD
+#   ------      ---------
+#  | 12 6 |    | 3V3 3V3 |
+#  | 11 5 |    | GND GND |
+#  | 10 4 |    |  91  81 |
+#  |  9 3 |    |  90  80 |
+#  |  8 2 |    |  88  79 |
+#  |  7 1 | <  |  87  78 | <
+#   ------      ---------
+
+set_io --warn-no-port PMOD1  78
+set_io --warn-no-port PMOD2  79
+set_io --warn-no-port PMOD3  80
+set_io --warn-no-port PMOD4  81
+set_io --warn-no-port PMOD7  87
+set_io --warn-no-port PMOD8  88
+set_io --warn-no-port PMOD9  90
+set_io --warn-no-port PMOD10 91

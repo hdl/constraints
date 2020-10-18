@@ -1,0 +1,13 @@
+#> LEDs
+#    D1
+# D4 D5 D2
+#    D3
+#
+# D1-D4: red
+# D5: green
+
+set_io --warn-no-port LED1 99
+set_io --warn-no-port LED2 98
+set_io --warn-no-port LED3 97
+set_io --warn-no-port LED4 96
+set_io --warn-no-port LED5 95

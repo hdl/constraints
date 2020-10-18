@@ -1,0 +1,8 @@
+#> FTDI
+# FTDI 0
+set_io --warn-no-port RES  66
+set_io --warn-no-port DONE 65
+set_io --warn-no-port SS   71
+set_io --warn-no-port MISO 68
+set_io --warn-no-port MOSI 67
+set_io --warn-no-port SCK  70

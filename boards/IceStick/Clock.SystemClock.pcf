@@ -1,0 +1,2 @@
+#> Clock (12 MHz)
+set_io --warn-no-port CLK 21
