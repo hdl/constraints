@@ -1,0 +1,4 @@
+#> USB
+set_io --warn-no-port USB_DN A2
+set_io --warn-no-port USB_DP A1
+set_io --warn-no-port USB_DP_PU A4

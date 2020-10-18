@@ -1,0 +1,5 @@
+#> Buttons
+set_io --warn-no-port USER1 E4
+set_io --warn-no-port USER2 D5
+set_io --warn-no-port USER3 E5
+set_io --warn-no-port USER4 F5

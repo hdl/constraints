@@ -1,0 +1,7 @@
+#> SPI
+set_io --warn-no-port SPI_MOSI F1
+set_io --warn-no-port SPI_MISO E1
+set_io --warn-no-port SPI_CLK D1
+set_io --warn-no-port SPI_IO2 F2
+set_io --warn-no-port SPI_IO3 B1
+set_io --warn-no-port SPI_cs C1
