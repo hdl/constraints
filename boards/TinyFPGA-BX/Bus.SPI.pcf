@@ -1,0 +1,7 @@
+#> SPI flash
+set_io --warn-no-port SPI_SS  F7
+set_io --warn-no-port SPI_SCK G7
+set_io --warn-no-port SPI_IO0 G6
+set_io --warn-no-port SPI_IO1 H7
+set_io --warn-no-port SPI_IO2 H4
+set_io --warn-no-port SPI_IO3 J8

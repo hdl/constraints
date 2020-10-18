@@ -1,4 +1,4 @@
-#> Clock (16MHz)
+#> Clock (16 MHz)
 set_io --warn-no-port CLK B2
 
 

@@ -1,0 +1,14 @@
+#> Left side of the board
+set_io --warn-no-port PIN_1  A2
+set_io --warn-no-port PIN_2  A1
+set_io --warn-no-port PIN_3  B1
+set_io --warn-no-port PIN_4  C2
+set_io --warn-no-port PIN_5  C1
+set_io --warn-no-port PIN_6  D2
+set_io --warn-no-port PIN_7  D1
+set_io --warn-no-port PIN_8  E2
+set_io --warn-no-port PIN_9  E1
+set_io --warn-no-port PIN_10 G2
+set_io --warn-no-port PIN_11 H1
+set_io --warn-no-port PIN_12 J1
+set_io --warn-no-port PIN_13 H2
