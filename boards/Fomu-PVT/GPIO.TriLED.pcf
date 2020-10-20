@@ -1,4 +1,4 @@
 #> Tri-colour LED
-set_io --warn-no-port RGB0 A5
-set_io --warn-no-port RGB1 B5
-set_io --warn-no-port RGB2 C5
+set_io --warn-no-port FomuPVT_RGB0 A5
+set_io --warn-no-port FomuPVT_RGB1 B5
+set_io --warn-no-port FomuPVT_RGB2 C5
