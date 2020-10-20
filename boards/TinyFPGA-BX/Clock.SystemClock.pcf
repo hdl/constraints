@@ -1,2 +1,2 @@
 #> Clock (16 MHz)
-set_io --warn-no-port CLK B2
+set_io --warn-no-port TinyFPGABX_CLK B2
