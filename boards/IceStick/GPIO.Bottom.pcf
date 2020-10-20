@@ -2,11 +2,11 @@
 #          7    6    5    4    3    2    1    0
 # BOT  |  44   45   47   48   56   60   61   62  GND  3V3 | <
 
-set_io --warn-no-port BR0  62
-set_io --warn-no-port BR1  61
-set_io --warn-no-port BR2  60
-set_io --warn-no-port BR3  56
-set_io --warn-no-port BR4  48
-set_io --warn-no-port BR5  47
-set_io --warn-no-port BR6  45
-set_io --warn-no-port BR7  44
+set_io --warn-no-port IceStick_BR0  62
+set_io --warn-no-port IceStick_BR1  61
+set_io --warn-no-port IceStick_BR2  60
+set_io --warn-no-port IceStick_BR3  56
+set_io --warn-no-port IceStick_BR4  48
+set_io --warn-no-port IceStick_BR5  47
+set_io --warn-no-port IceStick_BR6  45
+set_io --warn-no-port IceStick_BR7  44

@@ -1,9 +1,9 @@
 #> FTDI
 # FTDI 1
-set_io --warn-no-port DCD 1
-set_io --warn-no-port DSR 2
-set_io --warn-no-port DTR 3
-set_io --warn-no-port CTS 4
-set_io --warn-no-port RTS 7
-set_io --warn-no-port TX  8
-set_io --warn-no-port RX  9
+set_io --warn-no-port IceStick_DCD 1
+set_io --warn-no-port IceStick_DSR 2
+set_io --warn-no-port IceStick_DTR 3
+set_io --warn-no-port IceStick_CTS 4
+set_io --warn-no-port IceStick_RTS 7
+set_io --warn-no-port IceStick_TX  8
+set_io --warn-no-port IceStick_RX  9

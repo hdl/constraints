@@ -1,5 +1,5 @@
 #> Clock (12 MHz)
-set_io --warn-no-port CLK 21
+set_io --warn-no-port IceStick_CLK 21
 
 
 #> LEDs
@@ -10,17 +10,17 @@ set_io --warn-no-port CLK 21
 # D1-D4: red
 # D5: green
 
-set_io --warn-no-port LED1 99
-set_io --warn-no-port LED2 98
-set_io --warn-no-port LED3 97
-set_io --warn-no-port LED4 96
-set_io --warn-no-port LED5 95
+set_io --warn-no-port IceStick_LED1 99
+set_io --warn-no-port IceStick_LED2 98
+set_io --warn-no-port IceStick_LED3 97
+set_io --warn-no-port IceStick_LED4 96
+set_io --warn-no-port IceStick_LED5 95
 
 
 #> IrDA
-set_io --warn-no-port IR_TX 105
-set_io --warn-no-port IR_RX 106
-set_io --warn-no-port IR_SD 107
+set_io --warn-no-port IceStick_IR_TX 105
+set_io --warn-no-port IceStick_IR_RX 106
+set_io --warn-no-port IceStick_IR_SD 107
 
 
 #> PMOD
@@ -33,14 +33,14 @@ set_io --warn-no-port IR_SD 107
 #  |  7 1 | <  |  87  78 | <
 #   ------      ---------
 
-set_io --warn-no-port PMOD1  78
-set_io --warn-no-port PMOD2  79
-set_io --warn-no-port PMOD3  80
-set_io --warn-no-port PMOD4  81
-set_io --warn-no-port PMOD7  87
-set_io --warn-no-port PMOD8  88
-set_io --warn-no-port PMOD9  90
-set_io --warn-no-port PMOD10 91
+set_io --warn-no-port IceStick_PMOD1  78
+set_io --warn-no-port IceStick_PMOD2  79
+set_io --warn-no-port IceStick_PMOD3  80
+set_io --warn-no-port IceStick_PMOD4  81
+set_io --warn-no-port IceStick_PMOD7  87
+set_io --warn-no-port IceStick_PMOD8  88
+set_io --warn-no-port IceStick_PMOD9  90
+set_io --warn-no-port IceStick_PMOD10 91
 
 
 #> I/O
@@ -48,39 +48,39 @@ set_io --warn-no-port PMOD10 91
 # TOP  | 119  118  117  116  115  114  113  112  GND  3V3 | <
 # BOT  |  44   45   47   48   56   60   61   62  GND  3V3 | <
 
-set_io --warn-no-port TR0 112
-set_io --warn-no-port TR1 113
-set_io --warn-no-port TR2 114
-set_io --warn-no-port TR3 115
-set_io --warn-no-port TR4 116
-set_io --warn-no-port TR5 117
-set_io --warn-no-port TR6 118
-set_io --warn-no-port TR7 119
+set_io --warn-no-port IceStick_TR0 112
+set_io --warn-no-port IceStick_TR1 113
+set_io --warn-no-port IceStick_TR2 114
+set_io --warn-no-port IceStick_TR3 115
+set_io --warn-no-port IceStick_TR4 116
+set_io --warn-no-port IceStick_TR5 117
+set_io --warn-no-port IceStick_TR6 118
+set_io --warn-no-port IceStick_TR7 119
 
-set_io --warn-no-port BR0  62
-set_io --warn-no-port BR1  61
-set_io --warn-no-port BR2  60
-set_io --warn-no-port BR3  56
-set_io --warn-no-port BR4  48
-set_io --warn-no-port BR5  47
-set_io --warn-no-port BR6  45
-set_io --warn-no-port BR7  44
+set_io --warn-no-port IceStick_BR0  62
+set_io --warn-no-port IceStick_BR1  61
+set_io --warn-no-port IceStick_BR2  60
+set_io --warn-no-port IceStick_BR3  56
+set_io --warn-no-port IceStick_BR4  48
+set_io --warn-no-port IceStick_BR5  47
+set_io --warn-no-port IceStick_BR6  45
+set_io --warn-no-port IceStick_BR7  44
 
 
 #> FTDI
 # FTDI 0
-set_io --warn-no-port RES  66
-set_io --warn-no-port DONE 65
-set_io --warn-no-port SS   71
-set_io --warn-no-port MISO 68
-set_io --warn-no-port MOSI 67
-set_io --warn-no-port SCK  70
+set_io --warn-no-port IceStick_RES  66
+set_io --warn-no-port IceStick_DONE 65
+set_io --warn-no-port IceStick_SS   71
+set_io --warn-no-port IceStick_MISO 68
+set_io --warn-no-port IceStick_MOSI 67
+set_io --warn-no-port IceStick_SCK  70
 
 # FTDI 1
-set_io --warn-no-port DCD 1
-set_io --warn-no-port DSR 2
-set_io --warn-no-port DTR 3
-set_io --warn-no-port CTS 4
-set_io --warn-no-port RTS 7
-set_io --warn-no-port TX  8
-set_io --warn-no-port RX  9
+set_io --warn-no-port IceStick_DCD 1
+set_io --warn-no-port IceStick_DSR 2
+set_io --warn-no-port IceStick_DTR 3
+set_io --warn-no-port IceStick_CTS 4
+set_io --warn-no-port IceStick_RTS 7
+set_io --warn-no-port IceStick_TX  8
+set_io --warn-no-port IceStick_RX  9

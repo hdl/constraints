@@ -1,4 +1,4 @@
 #> IrDA
-set_io --warn-no-port IR_TX 105
-set_io --warn-no-port IR_RX 106
-set_io --warn-no-port IR_SD 107
+set_io --warn-no-port IceStick_IR_TX 105
+set_io --warn-no-port IceStick_IR_RX 106
+set_io --warn-no-port IceStick_IR_SD 107
