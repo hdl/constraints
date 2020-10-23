@@ -1,0 +1,76 @@
+#> Clock (12 MHz)
+set_io --warn-no-port IceZumAlhambraII_CLK 49
+
+
+#> LEDs
+set_io --warn-no-port IceZumAlhambraII_LED0 45
+set_io --warn-no-port IceZumAlhambraII_LED1 44
+set_io --warn-no-port IceZumAlhambraII_LED2 43
+set_io --warn-no-port IceZumAlhambraII_LED3 42
+set_io --warn-no-port IceZumAlhambraII_LED4 41
+set_io --warn-no-port IceZumAlhambraII_LED5 39
+set_io --warn-no-port IceZumAlhambraII_LED6 38
+set_io --warn-no-port IceZumAlhambraII_LED7 37
+
+
+#> Buttons
+set_io --warn-no-port IceZumAlhambraII_SW1 34
+set_io --warn-no-port IceZumAlhambraII_SW2 33
+
+
+#> I/O (5V)
+#  --------------------------------------   -------------------------------
+# | SCL SDA AR GND D13 D12 D11 D10 D9 D8 | | D7 D6  D5  D4  D3  D2  D1  D0 |
+#  --------------------------------------   -------------------------------
+#             -------------------------------     -------------------------
+#            |  x 5V  R 3v3 5vP  GND GND PWR |   | DD0 DD1 DD2 DD3 DD4 DD5 |
+#             -------------------------------     -------------------------
+
+# Top
+set_io --warn-no-port IceZumAlhambraII_D13 64
+set_io --warn-no-port IceZumAlhambraII_D12 63
+set_io --warn-no-port IceZumAlhambraII_D11 21
+set_io --warn-no-port IceZumAlhambraII_D10 22
+set_io --warn-no-port IceZumAlhambraII_D9  19
+set_io --warn-no-port IceZumAlhambraII_D8  20
+set_io --warn-no-port IceZumAlhambraII_D7   9
+set_io --warn-no-port IceZumAlhambraII_D6  10
+set_io --warn-no-port IceZumAlhambraII_D5   7
+set_io --warn-no-port IceZumAlhambraII_D4   8
+set_io --warn-no-port IceZumAlhambraII_D3   3
+set_io --warn-no-port IceZumAlhambraII_D2   4
+set_io --warn-no-port IceZumAlhambraII_D1   1
+set_io --warn-no-port IceZumAlhambraII_D0   2
+
+# Bottom
+set_io --warn-no-port IceZumAlhambraII_DD0 114
+set_io --warn-no-port IceZumAlhambraII_DD1 115
+set_io --warn-no-port IceZumAlhambraII_DD2 116
+set_io --warn-no-port IceZumAlhambraII_DD3 117
+set_io --warn-no-port IceZumAlhambraII_DD4 118
+set_io --warn-no-port IceZumAlhambraII_DD5 119
+
+
+#> I2C ADC
+set_io --warn-no-port IceZumAlhambraII_ADC_SCL 84
+set_io --warn-no-port IceZumAlhambraII_ADC_SDA 83
+set_io --warn-no-port IceZumAlhambraII_ADC_INT 90
+
+
+#> FTDI
+# FTDI 0
+set_io --warn-no-port IceZumAlhambraII_RES  66
+set_io --warn-no-port IceZumAlhambraII_DONE 65
+set_io --warn-no-port IceZumAlhambraII_SS   71
+set_io --warn-no-port IceZumAlhambraII_MISO 68
+set_io --warn-no-port IceZumAlhambraII_MOSI 67
+set_io --warn-no-port IceZumAlhambraII_SCK  70
+
+# FTDI 1
+set_io --warn-no-port IceZumAlhambraII_DCD 47
+set_io --warn-no-port IceZumAlhambraII_DSR 48
+set_io --warn-no-port IceZumAlhambraII_DTR 52
+set_io --warn-no-port IceZumAlhambraII_CTS 56
+set_io --warn-no-port IceZumAlhambraII_RTS 60
+set_io --warn-no-port IceZumAlhambraII_TX  61
+set_io --warn-no-port IceZumAlhambraII_RX  62

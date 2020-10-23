@@ -1,0 +1,4 @@
+#> I2C ADC
+set_io --warn-no-port IceZumAlhambraII_ADC_SCL 84
+set_io --warn-no-port IceZumAlhambraII_ADC_SDA 83
+set_io --warn-no-port IceZumAlhambraII_ADC_INT 90

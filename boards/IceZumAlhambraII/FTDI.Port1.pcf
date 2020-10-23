@@ -1,0 +1,9 @@
+#> FTDI
+# FTDI 1
+set_io --warn-no-port IceZumAlhambraII_DCD 47
+set_io --warn-no-port IceZumAlhambraII_DSR 48
+set_io --warn-no-port IceZumAlhambraII_DTR 52
+set_io --warn-no-port IceZumAlhambraII_CTS 56
+set_io --warn-no-port IceZumAlhambraII_RTS 60
+set_io --warn-no-port IceZumAlhambraII_TX  61
+set_io --warn-no-port IceZumAlhambraII_RX  62

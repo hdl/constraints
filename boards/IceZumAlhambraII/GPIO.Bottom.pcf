@@ -1,0 +1,12 @@
+#> I/O (5V)
+#             -------------------------------     -------------------------
+#            |  x 5V  R 3v3 5vP  GND GND PWR |   | DD0 DD1 DD2 DD3 DD4 DD5 |
+#             -------------------------------     -------------------------
+
+# Bottom
+set_io --warn-no-port IceZumAlhambraII_DD0 114
+set_io --warn-no-port IceZumAlhambraII_DD1 115
+set_io --warn-no-port IceZumAlhambraII_DD2 116
+set_io --warn-no-port IceZumAlhambraII_DD3 117
+set_io --warn-no-port IceZumAlhambraII_DD4 118
+set_io --warn-no-port IceZumAlhambraII_DD5 119
