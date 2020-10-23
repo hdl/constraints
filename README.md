@@ -61,5 +61,4 @@ Find examples in the following repositories:
 
 ### Xilinx/XilinxBoardStore
 
-The board data files used with Xilinx Vivado are hosted at [Xilinx/XilinxBoardStore](https://github.com/Xilinx/XilinxBoardStore).
-
+The board data files used with Xilinx Vivado are hosted at [Xilinx/XilinxBoardStore](https://github.com/Xilinx/XilinxBoardStore). The upstream of [Xilinx/XilinxBoardStore: boards/Digilent/](https://github.com/Xilinx/XilinxBoardStore/tree/master/boards/Digilent) is [Digilent/vivado-boards](https://github.com/Digilent/vivado-boards).
