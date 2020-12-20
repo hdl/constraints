@@ -1,3 +1,6 @@
+#| TinyFPGA-BX
+
+
 #> GP I/O (bottom of the board)
 set_io --warn-no-port TinyFPGABX_PIN_25 G1
 set_io --warn-no-port TinyFPGABX_PIN_26 J3

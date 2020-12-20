@@ -1,3 +1,6 @@
+#| TinyFPGA-BX
+
+
 #> Left side of the board
 set_io --warn-no-port TinyFPGABX_PIN_1  A2
 set_io --warn-no-port TinyFPGABX_PIN_2  A1
