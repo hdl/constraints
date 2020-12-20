@@ -1,5 +1,6 @@
 label: OrangeCrab-r02-25F
 device: ECP5
+package: csfBGA285
 doc:
   - https://github.com/gregdavill/OrangeCrab
 prog:
