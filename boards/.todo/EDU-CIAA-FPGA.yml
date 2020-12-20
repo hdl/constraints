@@ -1,0 +1,7 @@
+label: EDU-CIAA-FPGA
+device: HX4K
+package:
+doc:
+  - http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-fpga
+prog:
+  -

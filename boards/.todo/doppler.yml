@@ -1,0 +1,7 @@
+label: doppler
+device: UP5K
+package:
+doc:
+  - https://github.com/dadamachines/doppler/tree/master/hardware
+prog:
+  -

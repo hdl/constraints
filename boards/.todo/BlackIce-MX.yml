@@ -1,0 +1,7 @@
+label: myStorm BlackIce MX
+device: HX8K
+package:
+doc:
+  - https://github.com/folknology/IceCore
+prog:
+  -

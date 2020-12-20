@@ -1,0 +1,7 @@
+label: myStorm BlackIce II
+device: HX8K
+package:
+doc:
+  - https://github.com/mystorm-org/BlackIce-II
+prog:
+  -

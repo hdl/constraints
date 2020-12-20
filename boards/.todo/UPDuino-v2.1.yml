@@ -1,0 +1,7 @@
+label: UPDuino v2.1
+device: UP5K
+package:
+doc:
+  - https://github.com/tinyvision-ai-inc/UPduino-v2.1
+prog:
+  -

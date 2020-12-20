@@ -1,0 +1,7 @@
+label: iCEBreaker bitsy
+device: UP5K
+package:
+doc:
+  - https://github.com/icebreaker-fpga/icebreaker
+prog:
+  -

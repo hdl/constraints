@@ -1,0 +1,7 @@
+label: UPDuino v2.0
+device: UP5K
+package:
+doc:
+  - https://github.com/gtjennings1/UPDuino_v2_0
+prog:
+  -

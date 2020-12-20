@@ -1,0 +1,7 @@
+label: Nandland Go board
+device: HX1K
+package:
+doc:
+  - https://www.nandland.com/goboard/introduction.html
+prog:
+  -

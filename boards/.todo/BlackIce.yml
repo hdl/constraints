@@ -1,0 +1,8 @@
+label: myStorm BlackIce
+device: HX8K
+package:
+doc:
+  - https://gitlab.com/Folknology/mystorm/-/tree/BlackIce
+  - https://hackaday.io/project/12930-blackice-low-cost-open-hardware-fpga-dev-board
+prog:
+  -

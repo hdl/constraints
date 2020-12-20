@@ -1,0 +1,7 @@
+label: ULX3S-25F
+device: ECP5
+package:
+doc:
+  - https://github.com/emard/ulx3s
+prog:
+  -

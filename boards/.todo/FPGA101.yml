@@ -1,0 +1,7 @@
+label: FPGA 101 Workshop Badge Board
+device: UP5K
+package:
+doc:
+  - https://github.com/mmicko/workshop_badge
+prog:
+  -
