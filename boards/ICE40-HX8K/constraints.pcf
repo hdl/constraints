@@ -1,3 +1,6 @@
+#| ICE40-HX8K
+
+
 #> Clock (12 MHz)
 set_io --warn-no-port CLK J3
 
