@@ -1,0 +1,7 @@
+label: IceZero
+device: ICE40-HX4K
+package:
+doc:
+  - https://shop.trenz-electronic.de/en/TE0876-02-A-IceZero-with-Lattice-ICE40HX-4-MBit-external-SRAM-5.6-x-3.05-cm
+prog:
+  -

@@ -1,0 +1,7 @@
+label: manila iCE
+device: ICE40-HX4K
+package:
+doc:
+  - https://github.com/joshtyler/manila-ice
+prog:
+  -

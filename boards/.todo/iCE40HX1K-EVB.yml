@@ -1,0 +1,7 @@
+label: Olimex iCE40HX1K-EVB
+device: ICE40-HX1K
+package:
+doc:
+  - https://www.olimex.com/Products/FPGA/iCE40/iCE40HX1K-EVB/open-source-hardware
+prog:
+  -

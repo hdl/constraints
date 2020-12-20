@@ -1,0 +1,7 @@
+label: Glasgow revC
+device: ICE40-HX8K
+package:
+doc:
+  - https://github.com/GlasgowEmbedded/glasgow
+prog:
+  -

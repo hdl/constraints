@@ -1,0 +1,7 @@
+label: CAT Board
+device: ICE40-HX8K
+package:
+doc:
+  - https://github.com/xesscorp/CAT-Board
+prog:
+  -

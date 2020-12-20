@@ -1,0 +1,7 @@
+label: BusPirate Ultra
+device: ICE40-HX4K
+package:
+doc:
+  - https://github.com/DangerousPrototypes/BusPirateUltraHardware
+prog:
+  -
