@@ -1,3 +1,6 @@
+#| iCEstick
+
+
 #> FTDI
 # FTDI 1
 set_io --warn-no-port IceStick_DCD 1
