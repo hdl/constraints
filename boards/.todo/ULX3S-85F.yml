@@ -1,5 +1,5 @@
-label: ULX3S-85F
-device: ECP5
+label: ULX3S 85F
+device: ECP5-85F
 package:
 doc:
   - https://github.com/emard/ulx3s

@@ -1,5 +1,5 @@
 label: Nandland Go board
-device: HX1K
+device: ICE40-HX1K
 package:
 doc:
   - https://www.nandland.com/goboard/introduction.html

@@ -1,5 +1,5 @@
 label: iCESugar v1.5
-device: UP5K
+device: ICE40-UP5K
 package: SG48
 doc:
   - https://github.com/wuxx/icesugar

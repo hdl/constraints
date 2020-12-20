@@ -1,5 +1,5 @@
 label: iceFUN
-device: HX8K
+device: ICE40-HX8K
 package:
 doc:
   - https://www.robot-electronics.co.uk/icefun.html

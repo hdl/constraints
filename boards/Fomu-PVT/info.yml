@@ -1,5 +1,5 @@
 label: Fomu PVT
-device: UP5K
+device: ICE40-UP5K
 package: UWG30
 doc:
   - https://github.com/im-tomu/fomu-hardware

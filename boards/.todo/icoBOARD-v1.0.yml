@@ -1,5 +1,5 @@
 label: icoBOARD v1.0
-device: HX8K
+device: ICE40-HX8K
 package:
 doc:
   - http://icoboard.org/about-icoboard.html

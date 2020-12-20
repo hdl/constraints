@@ -1,5 +1,5 @@
 label: TinyFPGA-BX
-device: LP8K
+device: ICE40-LP8K
 package: CM81
 doc:
   - https://github.com/tinyfpga/TinyFPGA-BX

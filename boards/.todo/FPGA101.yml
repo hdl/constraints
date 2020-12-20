@@ -1,5 +1,5 @@
 label: FPGA 101 Workshop Badge Board
-device: UP5K
+device: ICE40-UP5K
 package:
 doc:
   - https://github.com/mmicko/workshop_badge

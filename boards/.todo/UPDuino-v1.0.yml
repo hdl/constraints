@@ -1,5 +1,5 @@
 label: UPDuino v1.0
-device: UP5K
+device: ICE40-UP5K
 package:
 doc:
   - https://github.com/gtjennings1/UPDuino_v1_0

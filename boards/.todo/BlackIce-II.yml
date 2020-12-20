@@ -1,5 +1,5 @@
 label: myStorm BlackIce II
-device: HX8K
+device: ICE40-HX8K
 package:
 doc:
   - https://github.com/mystorm-org/BlackIce-II

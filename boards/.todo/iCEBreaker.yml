@@ -1,5 +1,5 @@
 label: iCEBreaker
-device: UP5K
+device: ICE40-UP5K
 package:
 doc:
   - https://github.com/icebreaker-fpga/icebreaker

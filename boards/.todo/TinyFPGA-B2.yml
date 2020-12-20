@@ -1,5 +1,5 @@
 label: TinyFPGA B2
-device: LP8K
+device: ICE40-LP8K
 package:
 doc:
   - http://tinyfpga.com/b-series-guide.html

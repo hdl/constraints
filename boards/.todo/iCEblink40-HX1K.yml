@@ -1,5 +1,5 @@
 label: iCEblink40-HX1K Evaluation Kit
-device: HX1K
+device: ICE40-HX1K
 package:
 doc:
   - http://www.latticesemi.com/iCEblink40-HX1K

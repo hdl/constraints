@@ -1,5 +1,5 @@
 label: Alchitry Cu
-device: HX8K
+device: ICE40-HX8K
 package:
 doc:
   - https://alchitry.com/products/alchitry-cu-fpga-development-board

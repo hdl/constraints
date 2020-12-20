@@ -1,5 +1,5 @@
 label: IceZUM Alhambra
-device: HX1K
+device: ICE40-HX1K
 package: TQ144
 doc:
   - https://github.com/FPGAwars/icezum

@@ -1,5 +1,5 @@
 label: myStorm BlackIce
-device: HX8K
+device: ICE40-HX8K
 package:
 doc:
   - https://gitlab.com/Folknology/mystorm/-/tree/BlackIce

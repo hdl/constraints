@@ -1,5 +1,5 @@
 label: iCE40 UltraPlus Breakout Board
-device: UP5K
+device: ICE40-UP5K
 package:
 doc:
   - http://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/iCE40UltraPlusBreakoutBoard

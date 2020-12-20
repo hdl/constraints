@@ -1,5 +1,5 @@
 label: Kéfir I iCE40-HX4K
-device: HX4K
+device: ICE40-HX4K
 package:
 doc:
   - http://fpgalibre.sourceforge.net/Kefir/

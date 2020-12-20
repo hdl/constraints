@@ -1,5 +1,5 @@
 label: iCE40-HX8K Breakout Board
-device: HX8K
+device: ICE40-HX8K
 package: CT256
 doc:
   - http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/iCE40HX8KBreakoutBoard

@@ -1,5 +1,5 @@
 label: iCEstick Evaluation Kit
-device: HX1K
+device: ICE40-HX1K
 package: TQ144
 doc:
   - http://www.latticesemi.com/icestick

@@ -1,5 +1,5 @@
 label: IceZUM Alhambra II
-device: HX4K
+device: ICE40-HX4K
 package: TQ144
 doc:
   - https://github.com/FPGAwars/Alhambra-II-FPGA
