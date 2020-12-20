@@ -1,6 +1,6 @@
 label: iCESugar v1.5
 device: UP5K
-package: QFN48
+package: SG48
 doc:
   - https://github.com/wuxx/icesugar
 prog:
