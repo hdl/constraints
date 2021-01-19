@@ -7,13 +7,14 @@
 
 # FPGA board constraints
 
-Any HDL design targeting FPGA boards needs constraint files in a vendor/tool specific format. Constraints are typically tied to the board and the interfaces, but not to the actual design. Therefore, copying them is inefficient and increases the maintenance burden of projects including multiple designs to be tested on several boards. This repository provides constraint definitions in a standardised and distributed format, fot decoupling board details from design sources.
+Any HDL design targeting FPGA boards needs constraint files in a vendor/tool specific format. Constraints are typically tied to the board and the interfaces, but not to the actual design. Therefore, copying them is inefficient and increases the maintenance burden of projects including multiple designs to be tested on several boards. This repository provides constraint definitions in a standardised and distributed format, for decoupling board details from design sources.
 
 - Physical Constraints File (`*.pcf`) for Lattice IceCube2.
 - Lattice Preference File (`*.lpf`) for Lattice Diamond.
 - User Constraint Files (`*.ucf`) for Xilinx ISE ≤14.7.
 - Xilinx Design Constraints (`*.xdc`) for Xilinx Vivado.
 - Synopsis Design Constraints (`*.sdc`) for Altera Quartus-II.
+- Physical Design Constraint (`*.pdc`) for Microsemi Libero-SoC.
 
 ## Short term goal
 
