@@ -13,8 +13,8 @@ Any HDL design targeting FPGA boards needs constraint files in a vendor/tool spe
 - Lattice Preference File (`*.lpf`) for Lattice Diamond.
 - User Constraint Files (`*.ucf`) for Xilinx ISE ≤14.7.
 - Xilinx Design Constraints (`*.xdc`) for Xilinx Vivado.
-- Synopsis Design Constraints (`*.sdc`) for Altera Quartus-II.
-- Physical Design Constraint (`*.pdc`) for Microsemi Libero-SoC.
+- Synopsis Design Constraints (`*.sdc`) for Intel Quartus Prime (formerly Altera Quartus-II).
+- Physical Design Constraints (`*.pdc`) for Microsemi Libero-SoC.
 
 ## Short term goal
 
