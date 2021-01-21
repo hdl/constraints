@@ -1,0 +1,4 @@
+label: ICE40 UP5K
+device: ICE40-UP5K
+packages:
+  - UWG30

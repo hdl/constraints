@@ -1,0 +1,14 @@
+# <SOMETHING> means "change me"
+# FIELD? means "optional"
+
+label: "<LABEL>"
+device: "<NAME>"
+package: "<PACKAGE>"
+doc?:
+  - <URL1>
+  - <URL2>
+  - <URL3>
+prog?:
+  - <TOOL1>
+  - <TOOL2>
+  - <TOOL3>
