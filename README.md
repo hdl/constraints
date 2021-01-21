@@ -59,6 +59,10 @@ Find examples in the following repositories:
 
 [litex-boards](https://github.com/litex-hub/litex-boards) is equivalent to this repository, but constraints are defined as Python modules. It'd be interesting to allow conversions between the YAML and LiteX board definitions. At the same time, from LiteX definitions it should be possible to generate vendor constraint files matching the guidelines.
 
+### nmigen/nmigen-boards
+
+[nmigen/nmigen-boards](https://github.com/nmigen/nmigen-boards) provides board and connector definition files for nMigen. It is also equivalent to this repository, but constraints are defined as Python modules. As with litex-boards, it'd be interesting to allow conversions between the YAML and nMigen board definitions. The syntax used in nmigen-boards feels more streamlined.
+
 ### SymbiFlow/yosys-symbiflow-plugins
 
 [yosys-symbiflow-plugins](https://github.com/SymbiFlow/yosys-symbiflow-plugins) contains plugins for Yosys developed as part of the [SymbiFlow](https://github.com/SymbiFlow) project. Some of those plugins are the `xdc-plugin` or the `sdc-plugin`. Those take the constraints and information and converts them to annotations on RTL. Annotations can also be directly provided in HDL too. Hence, the aim is to collect everything into the RTL and then write the data back for downstream tools to use. The main benefit of this approach is using the names in RTL, instead of dealing with mangled names after optimisation. See also [XDC commands supported by SymbiFlow Yosys Plugins](https://docs.google.com/spreadsheets/d/1G-E2Dq8YG4g9Z6mTygpumwlI_vNlFUQinc9gMgePfec/edit#gid=80555131) and [Yosys and Constraints System](https://docs.google.com/drawings/d/1r2LXypJF5AD40LfHegml3_fIvPT2jZ3n2OZYW9-9dLU/edit).
