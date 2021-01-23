@@ -19,8 +19,8 @@
 ##			Vendor:				Abracon Corp.
 ##			Device:				ASEM1-100.000Mhz-LC-T - 1 to 150 MHz Ultra Miniature Pure Silicon Clock Oscillator
 ##			Frequency:		100 MHz, 50ppm
-set_property PACKAGE_PIN    E3        [ get_ports Arty_SystemClock_100MHz ]
+set_property PACKAGE_PIN    E3        [ get_ports ArtyA735T_SystemClock_100MHz ]
 # set I/O standard
-set_property IOSTANDARD     LVCMOS33  [ get_ports Arty_SystemClock_100MHz ]
+set_property IOSTANDARD     LVCMOS33  [ get_ports ArtyA735T_SystemClock_100MHz ]
 # specify a 200 MHz clock
-create_clock -period 10.000 -name PIN_SystemClock_100MHz [ get_ports Arty_SystemClock_100MHz ]
+create_clock -period 10.000 -name PIN_SystemClock_100MHz [ get_ports ArtyA735T_SystemClock_100MHz ]
