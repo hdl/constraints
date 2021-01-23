@@ -2,6 +2,7 @@
 # FIELD? means "optional"
 
 label: "<LABEL>"
+part-number?: "<PART_NUMBER>"
 device: "<NAME>"
 package: "<PACKAGE>"
 doc?:
