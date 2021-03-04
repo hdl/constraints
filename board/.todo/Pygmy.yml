@@ -1,0 +1,7 @@
+label: Pygmy Stamp Board
+device: EOS-S3
+package:
+doc:
+  - https://www.optimuslogic.in/product_pygmy.html
+prog:
+  -
