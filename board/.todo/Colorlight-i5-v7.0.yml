@@ -1,0 +1,7 @@
+label: Colorlight i5-v7.0
+device: ECP5-25F
+package: BGA381
+doc:
+  - https://github.com/wuxx/Colorlight-FPGA-Projects
+prog:
+  - DAPLink
