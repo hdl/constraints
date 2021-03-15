@@ -1,1 +1,6 @@
 label: ZC706
+device: XC7Z045-2
+package: FFG900
+part-number: EK-Z7-ZC706-G
+doc:
+  - https://www.xilinx.com/products/boards-and-kits/ek-z7-zc706-g.html

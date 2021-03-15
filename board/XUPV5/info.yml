@@ -1,1 +1,5 @@
 label: XUPV5
+device: XC5VLX110T-1
+package: FFG1136
+doc:
+  - https://www.xilinx.com/support/university/boards-portfolio/xup-boards/DigilentXUPV5Board.html

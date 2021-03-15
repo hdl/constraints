@@ -1,1 +1,7 @@
 label: ZedBoard
+device: XC7Z020-1
+package: CLG484
+part-number: AES-Z7EV-7Z020-G
+doc:
+  - https://www.xilinx.com/products/boards-and-kits/1-8dyf-11.html
+  - https://store.digilentinc.com/zedboard-zynq-7000-arm-fpga-soc-development-board/
