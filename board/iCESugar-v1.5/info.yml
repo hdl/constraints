@@ -5,3 +5,4 @@ doc:
   - https://github.com/wuxx/icesugar
 prog:
   - icesprog
+  - DAPLink
