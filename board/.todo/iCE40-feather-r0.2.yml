@@ -1,0 +1,7 @@
+label: iCE40 Feather r0.2
+device: ICE40-UP5K
+package:
+doc:
+  - https://github.com/joshajohnson/iCE40-feather
+prog:
+  - iceprog
