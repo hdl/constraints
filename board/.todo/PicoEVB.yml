@@ -1,0 +1,7 @@
+label: PicoEVB
+device: XC7A50T-2
+package: CSG325C
+doc:
+  - https://github.com/RHSResearchLLC/PicoEVB
+prog:
+  -
