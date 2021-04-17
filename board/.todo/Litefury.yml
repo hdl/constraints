@@ -1,0 +1,7 @@
+label: PicoEVB
+device: XC7A100T-L2
+package: FGG484E
+doc:
+  - https://github.com/RHSResearchLLC/NiteFury-and-LiteFury
+prog:
+  -
