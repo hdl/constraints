@@ -3,5 +3,6 @@ device: ICE40-UP5K
 package:
 doc:
   - https://github.com/joshajohnson/iCE40-feather
+  - https://www.pcbway.com/project/gifts_detail/iCE40_Feather.html
 prog:
   - iceprog
