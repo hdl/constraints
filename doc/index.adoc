@@ -12,23 +12,36 @@ https://github.com/hdl/packages[image:https://img.shields.io/badge/hdl-packages-
 https://gitter.im/hdl/community[image:https://img.shields.io/gitter/room/hdl/community.svg?longCache=true&style=flat-square&logo=gitter&logoColor=fff&color=4db797[title='hdl/community on gitter.im']] |
 https://github.com/hdl/awesome[image:https://img.shields.io/badge/hdl-awesome-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef[title='hdl/awesome GitHub repository']]
 
-Hardware Description Language (HDL) designs prototyped on FPGAs are constrained by the devices and interfaces available on the development boards. Most of the constraints are tied to the physical characteristics and not to the logic design. Therefore, the maintenance burden of projects to be tested on multiple boards can be reduced by sharing constraint definition files. This repository provides constraint definitions in a standardised and distributed format, for decoupling board details from design sources. Unlike other similar solutions, these resources are not tied to any specific project management tool.
+Hardware Description Language (HDL) designs prototyped on FPGAs are constrained by the devices and interfaces available
+on the development boards.
+Most of the constraints are tied to the physical characteristics and not to the logic design.
+Therefore, the maintenance burden of projects to be tested on multiple boards can be reduced by sharing constraint
+definition files.
+This repository provides constraint definitions in a standardised and distributed format, for decoupling board details
+from design sources.
+Unlike other similar solutions, these resources are not tied to any specific project management tool.
+
+On top of pinout and I/O constraints, programming/configuring development boards implies dealing with external memories
+(either flash or SDRAM) and typically debugging the SoC designs using JTAG, GDB, etc. Hence, this repository also
+contains data about those.
 
 == Structure of the repository
 
 * `board/`: a subdir for each board
 ** `.todo/`: a file for each incomplete board
 ** `<BOARDNAME>`:
-*** `info.yml`: board metadata
+*** `info.yml`: board data
 *** `<CONSTRAINT_FILE(S)>`
 * `device/`: a subdir for each device
 ** `<DEVICENAME>`
-*** `info.yml`: device metadata
+*** `info.yml`: device data
 * `flash/`
+** _TBD_
+* `prog`
 ** _TBD_
 * `sdram/`
 ** _TBD_
-* `template/`: templates for metadata files
+* `template/`: templates for data files
 ** `board.info.yml`
 ** `device.info.yml`
 
@@ -54,7 +67,11 @@ For each board, sets of constraint files are provided according to the following
 
 This repository is expected to be added as a git submodule or otherwise vendored in existing HDL designs.
 
-The recommended approach is defining one top level source per board, on top of the design's top unit. To avoid ambiguity, we name the former `BoardTop` and the latter `DesignTop`. The purpose of BoardTop is to describe board specific resources (PLLs, DCMs, RAM controllers, etc.) and type/polarity conversions, so that the DesignTop is unmodified for either simulation or implementation, with any tool and/or for any target board.
+The recommended approach is defining one top level source per board, on top of the design's top unit.
+To avoid ambiguity, we name the former `BoardTop` and the latter `DesignTop`.
+The purpose of BoardTop is to describe board specific resources (PLLs, DCMs, RAM controllers, etc.) and type/polarity
+conversions, so that the DesignTop is unmodified for either simulation or implementation, with any tool and/or for any
+target board.
 
 Responsibilities of a `BoardTop` component/module:
 
@@ -73,7 +90,10 @@ Find examples in the following repositories:
 
 == Contributing
 
-Should you find something wrong, missing or outdated; or if you miss your favourite board/device, you are welcome to contribute! Check the https://github.com/hdl/awesome/issues?q=is%3Aopen[open issues and pull request]. If no one is working on it, let us know and go ahead according to the rules explained above.
+Should you find something wrong, missing or outdated; or if you miss your favourite board/device, you are welcome to
+contribute!
+Check the https://github.com/hdl/awesome/issues?q=is%3Aopen[open issues and pull request].
+If no one is working on it, let us know and go ahead according to the rules explained above.
 
 == Future work
 
@@ -109,32 +129,61 @@ See reference to yosys-symbiflow-plugins below.
 
 === VLSI-EDA/PoC
 
-https://github.com/VLSI-EDA/PoC/[PoC] has a large collection of constraint files for Xilinx ISE/Vivado and Intel/Altera's Quartus-II. The initial commit of this repository imported most of the content from https://github.com/VLSI-EDA/PoC/tree/master/ucf[VLSI-EDA/PoC: ucf/].
+https://github.com/VLSI-EDA/PoC/[PoC] has a large collection of constraint files for Xilinx ISE/Vivado and
+Intel/Altera's Quartus-II.
+The initial commit of this repository imported most of the content from
+https://github.com/VLSI-EDA/PoC/tree/master/ucf[VLSI-EDA/PoC: ucf/].
 
 === INTI-CMNB-FPGA/fpga_lib
 
-https://github.com/INTI-CMNB-FPGA/fpga_lib[fpga_lib] contains some YAML files that use a custom format: https://github.com/INTI-CMNB-FPGA/fpga_lib/tree/master/boards[INTI-CMNB-FPGA/fpga_lib: boards/]. A Python script (https://github.com/INTI-CMNB-FPGA/fpga_lib/blob/master/scripts/boardfiles.py[boardfiles.py]) allows generating UCF files from the YAML sources.
+https://github.com/INTI-CMNB-FPGA/fpga_lib[fpga_lib] contains some YAML files that use a custom format:
+https://github.com/INTI-CMNB-FPGA/fpga_lib/tree/master/boards[INTI-CMNB-FPGA/fpga_lib: boards/].
+A Python script (https://github.com/INTI-CMNB-FPGA/fpga_lib/blob/master/scripts/boardfiles.py[boardfiles.py]) allows
+generating UCF files from the YAML sources.
 
 === eine/vhdl-cfg
 
-Constraints files (`.pcf` and `.lpf`) for open source boards were picked from https://github.com/eine/vhdl-cfg/[vhdl-cfg], which are based on resources from https://github.com/ghdl/ghdl-yosys-plugin[ghdl/ghdl-yosys-plugin], https://github.com/antonblanchard/ghdl-yosys-blink[antonblanchard/ghdl-yosys-blink], https://github.com/im-tomu/fomu-workshop[im-tomu/fomu-workshop], etc.
+Constraints files (`.pcf` and `.lpf`) for open source boards were picked from
+https://github.com/eine/vhdl-cfg/[vhdl-cfg], which are based on resources from
+https://github.com/ghdl/ghdl-yosys-plugin[ghdl/ghdl-yosys-plugin],
+https://github.com/antonblanchard/ghdl-yosys-blink[antonblanchard/ghdl-yosys-blink],
+https://github.com/im-tomu/fomu-workshop[im-tomu/fomu-workshop], etc.
 
 === litex-hub/litex-boards
 
-https://github.com/litex-hub/litex-boards[litex-boards] is equivalent to this repository, but constraints are defined as Python modules. It'd be interesting to allow conversions between the YAML and LiteX board definitions. At the same time, from LiteX definitions it should be possible to generate vendor constraint files matching the guidelines.
+https://github.com/litex-hub/litex-boards[litex-boards] is equivalent to this repository, but constraints are defined as
+Python modules.
+It'd be interesting to allow conversions between the YAML and LiteX board definitions.
+At the same time, from LiteX definitions it should be possible to generate vendor constraint files matching the guidelines.
 
 === nmigen/nmigen-boards
 
-https://github.com/nmigen/nmigen-boards[nmigen/nmigen-boards] provides board and connector definition files for nMigen. It is also equivalent to this repository, but constraints are defined as Python modules. As with litex-boards, it'd be interesting to allow conversions between the YAML and nMigen board definitions. The syntax used in nmigen-boards feels more streamlined.
+https://github.com/nmigen/nmigen-boards[nmigen/nmigen-boards] provides board and connector definition files for nMigen.
+It is also equivalent to this repository, but constraints are defined as Python modules.
+As with litex-boards, it'd be interesting to allow conversions between the YAML and nMigen board definitions.
+The syntax used in nmigen-boards feels more streamlined.
 
 === SymbiFlow/yosys-symbiflow-plugins
 
-https://github.com/SymbiFlow/yosys-symbiflow-plugins[yosys-symbiflow-plugins] contains plugins for Yosys developed as part of the https://github.com/SymbiFlow[SymbiFlow] project. Some of those plugins are the `xdc-plugin` or the `sdc-plugin`. Those take the constraints and information and converts them to annotations on RTL. Annotations can also be directly provided in HDL too. Hence, the aim is to collect everything into the RTL and then write the data back for downstream tools to use. The main benefit of this approach is using the names in RTL, instead of dealing with mangled names after optimisation. See also https://docs.google.com/spreadsheets/d/1G-E2Dq8YG4g9Z6mTygpumwlI_vNlFUQinc9gMgePfec/edit#gid=80555131[XDC commands supported by SymbiFlow Yosys Plugins] and https://docs.google.com/drawings/d/1r2LXypJF5AD40LfHegml3_fIvPT2jZ3n2OZYW9-9dLU/edit[Yosys and Constraints System].
+https://github.com/SymbiFlow/yosys-symbiflow-plugins[yosys-symbiflow-plugins] contains plugins for Yosys developed as
+part of the https://github.com/SymbiFlow[SymbiFlow] project.
+Some of those plugins are the `xdc-plugin` or the `sdc-plugin`.
+Those take the constraints and information and converts them to annotations on RTL.
+Annotations can also be directly provided in HDL too.
+Hence, the aim is to collect everything into the RTL and then write the data back for downstream tools to use.
+The main benefit of this approach is using the names in RTL, instead of dealing with mangled names after optimisation.
+See also https://docs.google.com/spreadsheets/d/1G-E2Dq8YG4g9Z6mTygpumwlI_vNlFUQinc9gMgePfec/edit#gid=80555131[XDC commands supported by SymbiFlow Yosys Plugins]
+and https://docs.google.com/drawings/d/1r2LXypJF5AD40LfHegml3_fIvPT2jZ3n2OZYW9-9dLU/edit[Yosys and Constraints System].
 
 === olofk/fusesoc
 
-https://github.com/olofk/fusesoc[fusesoc] proposes an open source YAML format for defining cores. Hence, the constrains provided in this repository are expected to be used in those core definition sources. Ideally, fusesoc might import the YAML definition, instead of defining different filesets for each tool.
+https://github.com/olofk/fusesoc[fusesoc] proposes an open source YAML format for defining cores.
+Hence, the constrains provided in this repository are expected to be used in those core definition sources.
+Ideally, fusesoc might import the YAML definition, instead of defining different filesets for each tool.
 
 === Xilinx/XilinxBoardStore
 
-The board data files used with Xilinx Vivado are hosted at https://github.com/Xilinx/XilinxBoardStore[Xilinx/XilinxBoardStore]. The upstream of https://github.com/Xilinx/XilinxBoardStore/tree/master/boards/Digilent[Xilinx/XilinxBoardStore: boards/Digilent/] is https://github.com/Digilent/vivado-boards[Digilent/vivado-boards].
+The board data files used with Xilinx Vivado are hosted at
+https://github.com/Xilinx/XilinxBoardStore[Xilinx/XilinxBoardStore].
+The upstream of https://github.com/Xilinx/XilinxBoardStore/tree/master/boards/Digilent[Xilinx/XilinxBoardStore: boards/Digilent/]
+is https://github.com/Digilent/vivado-boards[Digilent/vivado-boards].
