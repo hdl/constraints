@@ -9,3 +9,4 @@ Tools for loading bitstreams and/or for on-chip debugging of the designs:
 - [fujprog](https://hdl.github.io/awesome/items/fujprog)
 - Xilinx/Digilent's iMPACT, ChipScope, EDK, Hardware Manager, xc3sprog, etc.
 - Lattice's Standalone Programmer
+- [pyOCD](https://github.com/pyocd/pyOCD)
