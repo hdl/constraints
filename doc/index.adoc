@@ -30,7 +30,7 @@ contains data about those.
 * `board/`: a subdir for each board
 ** `.todo/`: a file for each incomplete board
 ** `<BOARDNAME>`:
-*** `info.yml`: board data
+*** `info.yml` or `README.md`: board data
 *** `<CONSTRAINT_FILE(S)>`
 * `device/`: a subdir for each device
 ** `<DEVICENAME>`
