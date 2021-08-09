@@ -3,5 +3,3 @@ device: CrossLinkNX-LIFCL-40
 package:
 doc:
   - https://github.com/gregdavill/ArcticKoala
-prog:
-  -

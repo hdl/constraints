@@ -3,5 +3,3 @@ device: ICE40-HX4K
 package:
 doc:
   - http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-fpga
-prog:
-  -

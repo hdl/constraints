@@ -3,5 +3,3 @@ device: ICE40-HX4K
 package:
 doc:
   - http://fpgalibre.sourceforge.net/Kefir/
-prog:
-  -

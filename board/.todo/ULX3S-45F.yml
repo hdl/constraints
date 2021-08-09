@@ -3,5 +3,3 @@ device: ECP5-45F
 package:
 doc:
   - https://github.com/emard/ulx3s
-prog:
-  -

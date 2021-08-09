@@ -3,5 +3,3 @@ device: ICE40-HX8K
 package:
 doc:
   - http://icoboard.org/about-icoboard.html
-prog:
-  -

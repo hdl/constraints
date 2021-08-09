@@ -3,5 +3,3 @@ device: XC7K160T
 package: FFG676
 doc:
   - https://source.mnt.re/reform/reform-kintex-som
-prog:
-  -

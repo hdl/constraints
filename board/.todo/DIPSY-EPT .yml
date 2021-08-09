@@ -3,5 +3,3 @@ device: ICE40-HX1K
 package:
 doc:
   - https://wiki.trenz-electronic.de/pages/viewpage.action?pageId=20611802
-prog:
-  -

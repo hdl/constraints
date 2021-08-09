@@ -3,5 +3,3 @@ device: ICE40-UP5K
 package:
 doc:
   - http://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/iCE40UltraPlusBreakoutBoard
-prog:
-  -

@@ -3,5 +3,3 @@ device: ICE40-HX8K
 package:
 doc:
   - https://www.olimex.com/Products/FPGA/iCE40/iCE40HX8K-EVB/open-source-hardware
-prog:
-  -

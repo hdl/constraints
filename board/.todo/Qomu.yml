@@ -3,5 +3,3 @@ device: EOS-S3
 package:
 doc:
   - https://www.quicklogic.com/products/eos-s3/qomu-dev-kit/
-prog:
-  -

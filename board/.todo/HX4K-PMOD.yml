@@ -3,5 +3,3 @@ device: ICE-HX4K
 package:
 doc:
   - https://github.com/rschlaikjer/hx4k-pmod
-prog:
-  -

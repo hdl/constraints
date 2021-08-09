@@ -3,5 +3,3 @@ device:
 package: XC7A100T
 doc:
   - https://www.micro-nova.com/mercury-2
-prog:
-  -
