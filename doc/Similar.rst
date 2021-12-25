@@ -43,15 +43,15 @@ modules.
 It'd be interesting to allow conversions between the YAML and LiteX board definitions.
 At the same time, from LiteX definitions it should be possible to generate vendor constraint files matching the guidelines.
 
-.. _Similar:nmigen-boards:
+.. _Similar:amaranth-boards:
 
-nmigen/nmigen-boards
---------------------
+amaranth-lang/amaranth-boards
+-----------------------------
 
-:ghrepo:`nmigen/nmigen-boards` provides board and connector definition files for nMigen.
+:ghrepo:`amaranth-lang/amaranth-boards` provides board and connector definition files for Amaranth HDL.
 It is also equivalent to this repository, but constraints are defined as Python modules.
-As with litex-boards, it'd be interesting to allow conversions between the YAML and nMigen board definitions.
-The syntax used in nmigen-boards feels more streamlined.
+As with litex-boards, it'd be interesting to allow conversions between the YAML and Amaranth HDL board definitions.
+The syntax used in amaranth-boards feels more streamlined.
 
 .. _Similar:yosys-symbiflow-plugins:
 
