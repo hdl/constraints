@@ -1,3 +1,5 @@
+.. include:: shields.inc
+
 The FPGA Board Constraints Documentation
 ########################################
 
@@ -10,11 +12,7 @@ The FPGA Board Constraints Documentation
 
     <br>
 
-..
-  https://github.com/hdl/constraints[image:https://img.shields.io/badge/hdl-constraints-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef[title='hdl/constraints GitHub repository']]
-  https://github.com/hdl/packages[image:https://img.shields.io/badge/hdl-packages-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef[title='hdl/packages GitHub repository']] |
-  https://gitter.im/hdl/community[image:https://img.shields.io/gitter/room/hdl/community.svg?longCache=true&style=flat-square&logo=gitter&logoColor=fff&color=4db797[title='hdl/community on gitter.im']] |
-  https://github.com/hdl/awesome[image:https://img.shields.io/badge/hdl-awesome-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef[title='hdl/awesome GitHub repository']]
+.. centered:: |SHIELD:svg:gh:hdl:constraints| |SHIELD:svg:gh:hdl:packages| |SHIELD:svg:gh:hdl:awesome| |SHIELD:svg:Reports-gitter|
 
 Hardware Description Language (HDL) designs prototyped on FPGAs are constrained by the devices and interfaces available
 on the development boards.
