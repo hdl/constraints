@@ -14,31 +14,16 @@ on:
 
 jobs:
 
-  asciidoc:
+  Doc:
     runs-on: ubuntu-latest
+    name: 📓 Doc
     steps:
 
-    - uses: actions/checkout@v2
+    - name: 🧰 Checkout
+      uses: actions/checkout@v2
 
-    # docker run --rm -itv /$(pwd)://src -w //src asciidoctor/docker-asciidoctor doc/make.sh
-    - name: Build site
-      uses: docker://asciidoctor/docker-asciidoctor
+    - name: 📓 Build The Docs
+      uses: buildthedocs/btd@v0
       with:
-        args: doc/make.sh
-
-    - name: Publish site to gh-pages (doc)
-      if: github.event_name != 'pull_request'
-      run: |
-        mkdir pages
-        cd pages
-        git init
-        cp ../.git/config ./.git/config
-        touch .nojekyll
-        mv ../doc/index.html ./
-        mkdir img
-        cp ../doc/img/icon.png ./img
-        git add .
-        git config --local user.email "push@gha"
-        git config --local user.name "GHA"
-        git commit -am "update ${{ github.sha }}"
-        git push -u origin +HEAD:gh-pages
+        token: ${{ github.token }}
+        skip-deploy: github.event_name == 'pull_request'
