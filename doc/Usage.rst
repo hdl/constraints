@@ -1,5 +1,7 @@
+.. _Usage:
+
 Usage
-=====
+#####
 
 This repository is expected to be added as a git submodule or otherwise vendored in existing HDL designs.
 

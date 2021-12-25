@@ -1,10 +1,10 @@
 HDL attributes/annotations
-==========================
+##########################
 
 Some tools/vendors support specifying implementation constraints through attributes/annotations in HDL sources.
 
 VHDL
-----
+====
 
 * Timing
 
@@ -30,6 +30,6 @@ VHDL
   * Setting memory styles (register, distributedRAM/LUTRAM, BlockRAM, UltraRAM, ...)
 
 Verilog
--------
+=======
 
 See :ref:`yosys-symbiflow-plugin <Similar:yosys-symbiflow-plugins>`.

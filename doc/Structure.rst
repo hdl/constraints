@@ -1,7 +1,7 @@
 .. _Structure:
 
 Structure of the repository
-===========================
+###########################
 
 * ``board/``: a subdir for each board
 
@@ -16,18 +16,6 @@ Structure of the repository
   * ``<DEVICENAME>``
 
     * ``info.yml``: device data
-
-* ``flash/``
-
-  * _TBD_
-
-* ``prog``
-
-  * _TBD_
-
-* ``sdram/``
-
-  * _TBD_
 
 * ``template/``: templates for data files
 

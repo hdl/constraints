@@ -1,12 +1,12 @@
 .. _Similar:
 
 Similar resources
-=================
+#################
 
 .. _Similar:PoC:
 
 VLSI-EDA/PoC
-------------
+============
 
 :ghrepo:`PoC <VLSI-EDA/PoC>` has a large collection of constraint files for Xilinx ISE/Vivado and Intel/Altera's
 Quartus-II.
@@ -16,7 +16,7 @@ The initial commit of this repository imported most of the content from
 .. _Similar:fpga_lib:
 
 INTI-CMNB-FPGA/fpga_lib
------------------------
+=======================
 
 :ghrepo:`fpga_lib <INTI-CMNB-FPGA/fpga_lib>` contains some YAML files that use a custom format:
 :ghrepo:`INTI-CMNB-FPGA/fpga_lib: boards/ <INTI-CMNB-FPGA/fpga_lib/tree/master/boards>`.
@@ -26,7 +26,7 @@ UCF files from the YAML sources.
 .. _Similar:ghdl-yosys-plugin:
 
 ghdl/ghdl-yosys-plugin
-----------------------
+======================
 
 Constraints files (`.pcf` and `.lpf`) for open source boards are based on resources from
 :ghrepo:`ghdl/ghdl-yosys-plugin`,
@@ -36,7 +36,7 @@ Constraints files (`.pcf` and `.lpf`) for open source boards are based on resour
 .. _Similar:litex-boards:
 
 litex-hub/litex-boards
-----------------------
+======================
 
 :ghrepo:`litex-boards <litex-hub/litex-boards>` is equivalent to this repository, but constraints are defined as Python
 modules.
@@ -46,7 +46,7 @@ At the same time, from LiteX definitions it should be possible to generate vendo
 .. _Similar:amaranth-boards:
 
 amaranth-lang/amaranth-boards
------------------------------
+=============================
 
 :ghrepo:`amaranth-lang/amaranth-boards` provides board and connector definition files for Amaranth HDL.
 It is also equivalent to this repository, but constraints are defined as Python modules.
@@ -56,7 +56,7 @@ The syntax used in amaranth-boards feels more streamlined.
 .. _Similar:yosys-symbiflow-plugins:
 
 SymbiFlow/yosys-symbiflow-plugins
----------------------------------
+=================================
 
 :ghrepo:`yosys-symbiflow-plugins <SymbiFlow/yosys-symbiflow-plugins>` contains plugins for Yosys developed as
 part of the :ghrepo:`SymbiFlow` project.
@@ -71,7 +71,7 @@ and `Yosys and Constraints System <https://docs.google.com/drawings/d/1r2LXypJF5
 .. _Similar:fusesoc:
 
 olofk/fusesoc
--------------
+=============
 
 :ghrepo:`fusesoc <olofk/fusesoc>` proposes an open source YAML format for defining cores.
 Hence, the constrains provided in this repository are expected to be used in those core definition sources.
@@ -80,7 +80,7 @@ Ideally, fusesoc might import the YAML definition, instead of defining different
 .. _Similar:XilinxBoardStore:
 
 Xilinx/XilinxBoardStore
------------------------
+=======================
 
 The board data files used with Xilinx Vivado are hosted at
 :ghrepo:`Xilinx/XilinxBoardStore`.
