@@ -5,4 +5,4 @@ Documentation: https://github.com/icebreaker-fpga/icebreaker
 Prog:
   ID: "1d50:6146"
   Description: iCEBreaker bitsy v0
-  Tools: dfu
+  Tools: dfu-util

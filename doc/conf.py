@@ -3,11 +3,16 @@ from os.path import abspath
 from pathlib import Path
 from json import loads
 
-
 ROOT = Path(__file__).resolve().parent
 
 sys_path.insert(0, abspath('.'))
 sys_path.insert(0, abspath('..'))
+
+
+from data import generateBoardPages
+
+
+generateBoardPages()
 
 
 # -- Project information --------------------------------------------------

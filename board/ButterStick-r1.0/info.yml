@@ -9,4 +9,4 @@ Prog:
   Description: Butterstick (dfu v1.1)
   Tools:
     - openocd
-    - dfu
+    - dfu-util

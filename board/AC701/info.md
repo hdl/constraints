@@ -4,7 +4,7 @@ PartNumber: EK-A7-AC701-G
 Device: XC7A200T-2
 Package: FBG676C
 Documentation:
-  - "Xilinx Artix-7 FPGA AC701 Evaluation Kit": https://www.xilinx.com/products/boards-and-kits/ek-a7-ac701-g.html
+  "xilinx.com: Xilinx Artix-7 FPGA AC701 Evaluation Kit": https://www.xilinx.com/products/boards-and-kits/ek-a7-ac701-g.html
 Description: Xilinx Artix-7 FPGA AC701 Evaluation Kit
 ---
 

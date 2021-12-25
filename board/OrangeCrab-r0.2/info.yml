@@ -7,4 +7,4 @@ Prog:
   Description: OrangeCrab r0.2 DFU bootloader
   Tools:
     - openocd
-    - dfu
+    - dfu-util

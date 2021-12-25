@@ -63,7 +63,7 @@ class BoardInfo:
     PartNumber: str = None
     Device: str = None
     Package: str = None
-    Documentation: Union[str, List[str]] = None
+    Documentation: Union[str, List[str], Dict[str, str]] = None
     Prog: Union[ProgItem, str, List[str]] = None
     Content: str = None
 
@@ -82,7 +82,7 @@ class DeviceInfo:
     Label: str
     Device: str
     Packages: List[str] = None
-    Documentation: Union[str, List[Union[str, Dict[str, str]]]] = None
+    Documentation: Union[str, List[str], Dict[str, str]] = None
     Resources: LogicResources = None
 
 
@@ -94,6 +94,8 @@ def getBoardsInfo(verbose : bool = True):
             print(" >", item.parent.name)
         with item.open() as fptr:
             boards[item.parent.name] = BoardInfo(**yaml_load(fptr, yaml_loader))
+            if isinstance(boards[item.parent.name].Prog, dict):
+                boards[item.parent.name].Prog = ProgItem(**boards[item.parent.name].Prog)
 
     for item in boardInfoDir.glob("**/info.md"):
         if verbose:
