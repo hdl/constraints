@@ -16,6 +16,10 @@ def generatePerBoardMarkdownFileWithFrontmatter(contentDir):
     boardFileDir = contentDir / "boards"
     boardFileDir.mkdir(exist_ok=True)
 
+    # FIXME
+    # Currently, files use key 'Documentation', which is polymorphic, but Hugo expects a list of strings.
+    # When this function is converted to use dataclasses, that should be fixed (transformed).
+
     for item in boardInfoDir.glob("**/info.yml"):
 
         name = item.parent.name
