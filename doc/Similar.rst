@@ -77,6 +77,8 @@ olofk/fusesoc
 Hence, the constrains provided in this repository are expected to be used in those core definition sources.
 Ideally, fusesoc might import the YAML definition, instead of defining different filesets for each tool.
 
+See also `olofk/corescore: data <https://github.com/olofk/corescore/tree/master/data>`__.
+
 .. _Similar:XilinxBoardStore:
 
 Xilinx/XilinxBoardStore
