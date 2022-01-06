@@ -1,5 +1,7 @@
-label: ULX3S 12F
-device: ECP5-12F
-package:
-doc:
-  - https://github.com/emard/ulx3s
+Label: ULX3S 12F
+Device: ECP5-12F
+Package: CABGA381
+Documentation: https://github.com/emard/ulx3s
+Prog:
+  ID: "0403:6015"
+  Tools: fujprog

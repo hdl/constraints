@@ -1,7 +1,8 @@
-label: IceZUM Alhambra II
-device: ICE40-HX4K
-package: TQ144
-doc:
-  - https://github.com/FPGAwars/Alhambra-II-FPGA
-prog:
-  - iceprog
+Label: IceZUM Alhambra II
+Device: ICE40-HX4K
+Package: TQ144
+Documentation: https://github.com/FPGAwars/Alhambra-II-FPGA
+Prog:
+  ID: "0403:6010"
+  Description: Alhambra II
+  Tools: iceprog

@@ -1,8 +1,8 @@
-Label: iCEBreaker
+Label: iCEBreaker bitsy v1
 Device: ICE40-UP5K
 Package: SG48
 Documentation: https://github.com/icebreaker-fpga/icebreaker
 Prog:
-  ID: "0403:6010"
-  Description: Dual RS232-HS
-  Tools: iceprog
+  ID: "1d50:6146"
+  Description: iCEBreaker bitsy v1
+  Tools: dfu

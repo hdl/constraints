@@ -1,5 +1,3 @@
-label: BeagleWire
-device: ICE40-HX4K
-package:
-doc:
-  - https://elinux.org/BeagleBoard/BeagleWire
+Label: BeagleWire
+Device: ICE40-HX4K
+Documentation: https://elinux.org/BeagleBoard/BeagleWire

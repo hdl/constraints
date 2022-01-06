@@ -1,5 +1,8 @@
-label: EDU-CIAA-FPGA
-device: ICE40-HX4K
-package:
-doc:
-  - http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-fpga
+Label: EDU-CIAA-FPGA
+Device: ICE40-HX4K
+Package: TQ144
+Documentation: http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-fpga
+Prog:
+  ID: "0403:6010"
+  Description: Dual RS232-HS
+  Tools: iceprog

@@ -1,9 +1,8 @@
 ---
-label: XUPV5
-device: XC5VLX110T-1
-package: FFG1136
-doc:
-  - https://www.xilinx.com/support/university/boards-portfolio/xup-boards/DigilentXUPV5Board.html
+Label: XUPV5
+Device: XC5VLX110T-1
+Package: FFG1136
+Documentation: https://www.xilinx.com/support/university/boards-portfolio/xup-boards/DigilentXUPV5Board.html
 ---
 
 The XUPV5 platform corresponds to the ML505 platform for all but the FPGA

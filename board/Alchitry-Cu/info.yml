@@ -1,5 +1,8 @@
-label: Alchitry Cu
-device: ICE40-HX8K
-package:
-doc:
-  - https://alchitry.com/products/alchitry-cu-fpga-development-board
+Label: Alchitry Cu
+Device: ICE40-HX8K
+Package: CB132
+Documentation: https://alchitry.com/products/alchitry-cu-fpga-development-board
+Prog:
+  ID: "0403:6010"
+  Description: Alchitry Cu
+  Tools: iceprog

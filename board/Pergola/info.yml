@@ -1,5 +1,3 @@
-label: Pergola
-device: ECP5-12F
-package:
-doc:
-  - https://github.com/pergola-fpga/pergola
+Label: Pergola
+Device: ECP5-12F
+Documentation: https://github.com/pergola-fpga/pergola

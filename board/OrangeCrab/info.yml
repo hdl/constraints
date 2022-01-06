@@ -1,7 +1,0 @@
-label: OrangeCrab-r02-25F
-device: ECP5-25F
-package: csfBGA285
-doc:
-  - https://github.com/gregdavill/OrangeCrab
-prog:
-  - openocd

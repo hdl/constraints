@@ -1,5 +1,4 @@
-label: Litefury
-device: XC7A100T-L2
-package: FGG484E
-doc:
-  - https://github.com/RHSResearchLLC/NiteFury-and-LiteFury
+Label: Litefury
+Device: XC7A100T-L2
+Package: FGG484E
+Documentation: https://github.com/RHSResearchLLC/NiteFury-and-LiteFury

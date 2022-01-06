@@ -1,6 +1,9 @@
-label: myStorm BlackIce
-device: ICE40-HX8K
-package:
-doc:
+Label: myStorm BlackIce
+Device: ICE40-HX8K
+Package: TQ144
+Documentation:
   - https://gitlab.com/Folknology/mystorm/-/tree/BlackIce
   - https://hackaday.io/project/12930-blackice-low-cost-open-hardware-fpga-dev-board
+Prog:
+  ID: "0483:5740"
+  Tools: blackiceprog

@@ -1,6 +1,5 @@
-label: VC707
-device: XC7VX485T-2
-package: FFG1761
-part-number: EK-V7-VC707-G
-doc:
-  - https://www.xilinx.com/products/boards-and-kits/ek-v7-vc707-g.html
+Label: VC707
+Device: XC7VX485T-2
+Package: FFG1761
+PartNumber: EK-V7-VC707-G
+Documentation: https://www.xilinx.com/products/boards-and-kits/ek-v7-vc707-g.html

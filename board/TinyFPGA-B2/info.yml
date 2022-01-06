@@ -1,5 +1,7 @@
-label: TinyFPGA B2
-device: ICE40-LP8K
-package:
-doc:
-  - http://tinyfpga.com/b-series-guide.html
+Label: TinyFPGA B2
+Device: ICE40-LP8K
+Package: CM81
+Documentation: http://tinyfpga.com/b-series-guide.html
+Prog:
+  ID: "1209:2100"
+  Tools: tinyfpgab

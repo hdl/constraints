@@ -1,5 +1,4 @@
-label: MNT Reform Kintex-7 SoM
-device: XC7K160T
-package: FFG676
-doc:
-  - https://source.mnt.re/reform/reform-kintex-som
+Label: MNT Reform Kintex-7 SoM
+Device: XC7K160T
+Package: FFG676
+Documentation: https://source.mnt.re/reform/reform-kintex-som

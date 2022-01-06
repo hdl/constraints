@@ -1,8 +1,9 @@
-label: iCESugar v1.5
-device: ICE40-UP5K
-package: SG48
-doc:
-  - https://github.com/wuxx/icesugar
-prog:
-  - icesprog
-  - DAPLink
+Label: iCESugar v1.5
+Device: ICE40-UP5K
+Package: SG48
+Documentation: https://github.com/wuxx/icesugar
+Prog:
+  ID: "1d50:602b"
+  Tools:
+    - icesprog
+    - DAPLink

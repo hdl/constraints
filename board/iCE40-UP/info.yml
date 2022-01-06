@@ -1,5 +1,8 @@
-label: iCE40 UltraPlus Breakout Board
-device: ICE40-UP5K
-package:
-doc:
-  - http://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/iCE40UltraPlusBreakoutBoard
+Label: iCE40 UltraPlus Breakout Board
+Device: ICE40-UP5K
+Package: SG48
+Documentation: http://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/iCE40UltraPlusBreakoutBoard
+Prog:
+  ID: "0403:6010"
+  Description: Lattice iCE40UP5K Breakout
+  Tools: iceprog

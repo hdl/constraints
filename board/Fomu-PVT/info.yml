@@ -1,7 +1,8 @@
-label: Fomu PVT
-device: ICE40-UP5K
-package: UWG30
-doc:
-  - https://github.com/im-tomu/fomu-hardware
-prog:
-  - dfu-util
+Label: Fomu PVT
+Device: ICE40-UP5K
+Package: UWG30
+Documentation: https://github.com/im-tomu/fomu-hardware
+Prog:
+  ID: "1209:5bf0"
+  Description: Fomu PVT running DFU Bootloader
+  Tools: dfu-util

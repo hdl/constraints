@@ -1,7 +1,8 @@
-label: iCE40-HX8K Breakout Board
-device: ICE40-HX8K
-package: CT256
-doc:
-  - http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/iCE40HX8KBreakoutBoard
-prog:
-  - iceprog
+Label: iCE40-HX8K Breakout Board
+Device: ICE40-HX8K
+Package: CT256
+Documentation: http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/iCE40HX8KBreakoutBoard
+Prog:
+  ID: "0403:6010"
+  Description: "Lattice FTUSB Interface Cable"
+  Tools: iceprog

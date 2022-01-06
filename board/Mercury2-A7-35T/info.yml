@@ -1,5 +1,3 @@
-label: Mercury 2 A7-35T
-device:
-package: XC7A35T
-doc:
-  - https://www.micro-nova.com/mercury-2
+Label: Mercury 2 A7-35T
+Package: XC7A35T
+Documentation: https://www.micro-nova.com/mercury-2

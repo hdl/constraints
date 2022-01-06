@@ -1,5 +1,7 @@
-label: myStorm BlackIce MX
-device: ICE40-HX8K
-package:
-doc:
-  - https://github.com/folknology/IceCore
+Label: myStorm BlackIce MX
+Device: ICE40-HX8K
+Package: TQ144
+Documentation: https://github.com/folknology/IceCore
+Prog:
+  ID: "0483:5740"
+  Tools: blackiceprog

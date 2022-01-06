@@ -1,7 +1,8 @@
-label: iCESugar-pro
-device: ECP5-25F
-package: BGA256
-doc:
-  - https://github.com/wuxx/icesugar-pro
-prog:
+Label: iCESugar-pro
+Device: ECP5-25F
+Package: BGA256
+Documentation: https://github.com/wuxx/icesugar-pro
+Prog:
   - DAPLink
+  - FT2232
+  - USB-Blaster

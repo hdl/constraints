@@ -1,5 +1,3 @@
-label: ArcticKoala
-device: CrossLinkNX-LIFCL-40
-package:
-doc:
-  - https://github.com/gregdavill/ArcticKoala
+Label: ArcticKoala
+Device: CrossLinkNX-LIFCL-40
+Documentation: https://github.com/gregdavill/ArcticKoala

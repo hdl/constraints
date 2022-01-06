@@ -1,5 +1,3 @@
-label: HX4K PMOD Breakout
-device: ICE-HX4K
-package:
-doc:
-  - https://github.com/rschlaikjer/hx4k-pmod
+Label: HX4K PMOD Breakout
+Device: ICE-HX4K
+Documentation: https://github.com/rschlaikjer/hx4k-pmod

@@ -5,10 +5,9 @@ Structure of the repository
 
 * ``board/``: a subdir for each board
 
-  * ``.todo/``: a file for each incomplete board
   * ``<BOARDNAME>``:
 
-    * ``info.yml`` or ``README.md``: board data
+    * ``info.yml`` or ``info.md``: board data
     * ``<CONSTRAINT_FILE(S)>``
 
 * ``device/``: a subdir for each device
@@ -17,10 +16,6 @@ Structure of the repository
 
     * ``info.yml``: device data
 
-* ``template/``: templates for data files
-
-  * ``board.info.yml``
-  * ``device.info.yml``
 
 Types of constraint files:
 

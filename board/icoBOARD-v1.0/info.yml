@@ -1,5 +1,5 @@
-label: icoBOARD v1.0
-device: ICE40-HX8K
-package:
-doc:
-  - http://icoboard.org/about-icoboard.html
+Label: icoBOARD v1.0
+Device: ICE40-HX8K
+Package: CT256
+Documentation: http://icoboard.org/about-icoboard.html
+Prog: icoprog

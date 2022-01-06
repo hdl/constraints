@@ -1,5 +1,0 @@
-label: iCEBreaker bitsy
-device: ICE40-UP5K
-package:
-doc:
-  - https://github.com/icebreaker-fpga/icebreaker

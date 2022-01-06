@@ -1,6 +1,5 @@
-label: Arty A7-35T
-part-number: 410-319
-device: XC7A35T
-package: ICSG324-1L
-doc:
-  - https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/
+Label: Arty A7-35T
+PartNumber: 410-319
+Device: XC7A35T
+Package: ICSG324-1L
+Documentation: https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/

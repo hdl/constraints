@@ -1,5 +1,3 @@
-label: ECPIX-5 45F
-device: ECP5-45F
-package:
-doc:
-  - https://shop.lambdaconcept.com/home/46-1-ecpix-5.html#/1-ecpix_5_fpga-ecpix_5_45f
+Label: ECPIX-5 45F
+Device: ECP5-45F
+Documentation: https://shop.lambdaconcept.com/home/46-1-ecpix-5.html#/1-ecpix_5_fpga-ecpix_5_45f

@@ -1,5 +1,4 @@
-label: Atlys
-device: XC6SLX45
-package: CSG324C
-doc:
-  - https://reference.digilentinc.com/reference/programmable-logic/atlys/start
+Label: Atlys
+Device: XC6SLX45
+Package: CSG324C
+Documentation: https://reference.digilentinc.com/reference/programmable-logic/atlys/start

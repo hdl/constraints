@@ -1,5 +1,5 @@
-label: CAT Board
-device: ICE40-HX8K
-package:
-doc:
-  - https://github.com/xesscorp/CAT-Board
+Label: CAT Board
+Device: ICE40-HX8K
+Package: CT256
+Documentation: https://github.com/xesscorp/CAT-Board
+Prog: litterbox

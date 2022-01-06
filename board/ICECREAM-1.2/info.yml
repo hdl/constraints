@@ -1,7 +1,4 @@
-label: ICECREAM-1.2
-device: ICE40-HX4K
-package:
-doc:
-  - http://www.ele.uva.es/~jesus/ICECREAM/index.html
-prog:
-  - LPC1112
+Label: ICECREAM-1.2
+Device: ICE40-HX4K
+Documentation: http://www.ele.uva.es/~jesus/ICECREAM/index.html
+Prog: LPC1112

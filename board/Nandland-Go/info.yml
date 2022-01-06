@@ -1,5 +1,8 @@
-label: Nandland Go board
-device: ICE40-HX1K
-package:
-doc:
-  - https://www.nandland.com/goboard/introduction.html
+Label: Nandland Go board
+Device: ICE40-HX1K
+Package: VQ100
+Documentation: https://www.nandland.com/goboard/introduction.html
+Prog:
+  ID: "0403:6010"
+  Description: "Dual RS232-HS"
+  Tools: iceprog

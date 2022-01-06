@@ -1,5 +1,3 @@
-label: doppler
-device: ICE40-UP5K
-package:
-doc:
-  - https://github.com/dadamachines/doppler/tree/master/hardware
+Label: doppler
+Device: ICE40-UP5K
+Documentation: https://github.com/dadamachines/doppler/tree/master/hardware

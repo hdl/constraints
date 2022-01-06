@@ -1,6 +1,5 @@
-label: Arty S7-50
-part-number: 410-352
-device: XC7S50
-package: CSGA324
-doc:
-  - https://store.digilentinc.com/arty-s7-spartan-7-fpga-board-for-hobbyists-and-makers/
+Label: Arty S7-50
+PartNumber: 410-352
+Device: XC7S50
+Package: CSGA324
+Documentation: https://store.digilentinc.com/arty-s7-spartan-7-fpga-board-for-hobbyists-and-makers/

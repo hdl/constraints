@@ -1,5 +1,8 @@
-label: Kéfir I iCE40-HX4K
-device: ICE40-HX4K
-package:
-doc:
-  - http://fpgalibre.sourceforge.net/Kefir/
+Label: Kéfir I iCE40-HX4K
+Device: ICE40-HX4K
+Package: TQ144
+Documentation: http://fpgalibre.sourceforge.net/Kefir/
+Prog:
+  ID: "0403:6010"
+  Description: Milk JTAG:u
+  Tools: iceprog

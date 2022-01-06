@@ -1,7 +1,9 @@
-label: TinyFPGA-BX
-device: ICE40-LP8K
-package: CM81
-doc:
-  - https://github.com/tinyfpga/TinyFPGA-BX
-prog:
-  - serial
+Label: TinyFPGA-BX
+Device: ICE40-LP8K
+Package: CM81
+Documentation: https://github.com/tinyfpga/TinyFPGA-BX
+Prog: serial
+Prog:
+  ID: "1d50:6130"
+  Description: TinyFPGA BX
+  Tools: tinyprog
