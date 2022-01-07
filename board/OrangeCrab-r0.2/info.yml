@@ -1,7 +1,7 @@
 Label: OrangeCrab-r0.2-25F
 Device: ECP5-25F
 Package: csfBGA285
-Documentation: https://github.com/gregdavill/OrangeCrab
+Documentation: https://github.com/orangecrab-fpga/orangecrab-hardware
 Prog:
   ID: "1209:5af0"
   Description: OrangeCrab r0.2 DFU bootloader
