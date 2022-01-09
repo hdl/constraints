@@ -1,0 +1,6 @@
+#| UPDuino-v3.0
+
+
+#> TWI
+set_io UPDuinov30_TWI_SDA 31
+set_io UPDuinov30_TWI_SCL 37

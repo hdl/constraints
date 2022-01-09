@@ -1,0 +1,8 @@
+#| UPDuino-v3.0
+
+
+#> SPI [user port]
+set_io UPDuinov30_SPI_SDO 34
+set_io UPDuinov30_SPI_SCK 43
+set_io UPDuinov30_SPI_CSN 36
+set_io UPDuinov30_SPI_SDI 42

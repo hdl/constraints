@@ -1,0 +1,7 @@
+#| UPDuino-v3.0
+
+
+#> RGB power LED
+set_io UPDuinov30_LED_R 39
+set_io UPDuinov30_LED_G 40
+set_io UPDuinov30_LED_B 41

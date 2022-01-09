@@ -1,0 +1,8 @@
+#| UPDuino-v3.0
+
+
+#> GPIO [input]
+set_io UPDuinov30_GPIO_I[0] 44
+set_io UPDuinov30_GPIO_I[1] 4
+set_io UPDuinov30_GPIO_I[2] 3
+set_io UPDuinov30_GPIO_I[3] 48

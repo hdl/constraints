@@ -1,0 +1,8 @@
+#| UPDuino-v3.0
+
+
+#> SPI [on-board flash]
+set_io UPDuinov30_FLASH_SDO 14
+set_io UPDuinov30_FLASH_SCK 15
+set_io UPDuinov30_FLASH_CSN 16
+set_io UPDuinov30_FLASH_SDI 17
