@@ -1,0 +1,6 @@
+#| iCEBreaker
+
+
+#> UART
+set_io --warn-no-port iCEBreaker_TX 9
+set_io --warn-no-port iCEBreaker_RX 6

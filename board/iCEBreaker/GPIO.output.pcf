@@ -1,0 +1,8 @@
+#| iCEBreaker
+
+
+#> GPIO [output]
+set_io --warn-no-port iCEBreaker_GPIO_O[0] 25
+set_io --warn-no-port iCEBreaker_GPIO_O[1] 26
+set_io --warn-no-port iCEBreaker_GPIO_O[2] 27
+set_io --warn-no-port iCEBreaker_GPIO_O[3] 23

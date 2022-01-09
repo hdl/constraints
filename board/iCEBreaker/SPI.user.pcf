@@ -1,0 +1,8 @@
+#| iCEBreaker
+
+
+#> SPI [user port]
+set_io --warn-no-port iCEBreaker_SPI_SDO 43
+set_io --warn-no-port iCEBreaker_SPI_SCK 38
+set_io --warn-no-port iCEBreaker_SPI_CSN 34
+set_io --warn-no-port iCEBreaker_SPI_SDI 31

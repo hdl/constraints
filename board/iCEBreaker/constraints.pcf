@@ -1,0 +1,49 @@
+#| iCEBreaker
+
+
+#> UART
+set_io --warn-no-port iCEBreaker_TX 9
+set_io --warn-no-port iCEBreaker_RX 6
+
+
+#> SPI [on-board flash]
+set_io --warn-no-port iCEBreaker_FLASH_SDO 14
+set_io --warn-no-port iCEBreaker_FLASH_SCK 15
+set_io --warn-no-port iCEBreaker_FLASH_CSN 16
+set_io --warn-no-port iCEBreaker_FLASH_SDI 17
+
+
+#> SPI [user port]
+set_io --warn-no-port iCEBreaker_SPI_SDO 43
+set_io --warn-no-port iCEBreaker_SPI_SCK 38
+set_io --warn-no-port iCEBreaker_SPI_CSN 34
+set_io --warn-no-port iCEBreaker_SPI_SDI 31
+
+
+#> TWI
+set_io --warn-no-port iCEBreaker_TWI_SDA 2
+set_io --warn-no-port iCEBreaker_TWI_SCL 4
+
+
+#> GPIO [input]
+set_io --warn-no-port iCEBreaker_GPIO_I[0] 18
+set_io --warn-no-port iCEBreaker_GPIO_I[1] 19
+set_io --warn-no-port iCEBreaker_GPIO_I[2] 20
+set_io --warn-no-port iCEBreaker_GPIO_I[3] 28
+
+
+#> GPIO [output]
+set_io --warn-no-port iCEBreaker_GPIO_O[0] 25
+set_io --warn-no-port iCEBreaker_GPIO_O[1] 26
+set_io --warn-no-port iCEBreaker_GPIO_O[2] 27
+set_io --warn-no-port iCEBreaker_GPIO_O[3] 23
+
+
+#> RGB power LED
+set_io --warn-no-port iCEBreaker_LED_R 39
+set_io --warn-no-port iCEBreaker_LED_G 40
+set_io --warn-no-port iCEBreaker_LED_B 41
+
+
+#> User Reset Button
+set_io --warn-no-port iCEBreaker_USR_RST_BTN 10

@@ -1,0 +1,7 @@
+#| iCEBreaker
+
+
+#> RGB power LED
+set_io --warn-no-port iCEBreaker_LED_R 39
+set_io --warn-no-port iCEBreaker_LED_G 40
+set_io --warn-no-port iCEBreaker_LED_B 41

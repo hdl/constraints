@@ -1,0 +1,8 @@
+#| iCEBreaker
+
+
+#> SPI [on-board flash]
+set_io --warn-no-port iCEBreaker_FLASH_SDO 14
+set_io --warn-no-port iCEBreaker_FLASH_SCK 15
+set_io --warn-no-port iCEBreaker_FLASH_CSN 16
+set_io --warn-no-port iCEBreaker_FLASH_SDI 17
