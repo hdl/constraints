@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from constraints import getBoardsInfo, ProgItem
+from constraints import getBoardsInfo, getConstraintFiles, ProgItem
 
 
 boardDataDir = Path(__file__).resolve().parent / "Data/Boards"
@@ -10,13 +10,12 @@ def generateBoardPages():
 
     boardsInfo = getBoardsInfo()
     sortedBoardNames = sorted(boardsInfo, key=str.casefold)
+    boardConstraints = getConstraintFiles(sortedBoardNames)
 
     for name in sortedBoardNames:
         content = boardsInfo[name]
-        with (boardDataDir / f"{name}.inc").open("w") as wfptr:
+        with (boardDataDir / f"{name}.inc").open("w", encoding="utf-8") as wfptr:
             wfptr.write("\n\n")
-
-            wfptr.write(f"`hdl/constraints: board/{name} <https://github.com/hdl/constraints/tree/main/board/{name}>`__\n\n")
 
             if content.Description is not None:
                 wfptr.write(f"*{content.Description}*\n\n")
@@ -60,12 +59,38 @@ def generateBoardPages():
                     for item in items:
                         wfptr.write(f"  * {item}\n\n")
 
+            constraints = boardConstraints[name]
+            if constraints is None:
+                wfptr.write(f"* **Constraints**: :ghsrc:`board/{name} ✗`\n\n")
+            else:
+                wfptr.write(f"* **Constraints**: :ghsrc:`board/{name}`\n\n")
+                if len(constraints.LPF) != 0:
+                    wfptr.write(f"  * **LPF**:\n\n")
+                    for item in constraints.LPF:
+                        wfptr.write(f"    * :ghsrc:`{item.replace('.',' » ')} <board/{name}/{item}.lpf>`\n\n")
+                if len(constraints.PCF) != 0:
+                    wfptr.write(f"  * **PCF**:\n\n")
+                    for item in constraints.PCF:
+                        wfptr.write(f"    * :ghsrc:`{item.replace('.',' » ')} <board/{name}/{item}.pcf>`\n\n")
+                if len(constraints.SDC) != 0:
+                    wfptr.write(f"  * **SDC**:\n\n")
+                    for item in constraints.SDC:
+                        wfptr.write(f"    * :ghsrc:`{item.replace('.',' » ')} <board/{name}/{item}.sdc>`\n\n")
+                if len(constraints.UCF) != 0:
+                    wfptr.write(f"  * **UCF**:\n\n")
+                    for item in constraints.UCF:
+                        wfptr.write(f"    * :ghsrc:`{item.replace('.',' » ')} <board/{name}/{item}.ucf>`\n\n")
+                if len(constraints.XDC) != 0:
+                    wfptr.write(f"  * **XDC**:\n\n")
+                    for item in constraints.XDC:
+                        wfptr.write(f"    * :ghsrc:`{item.replace('.',' » ')} <board/{name}/{item}.xdc>`\n\n")
+
             if content.Content is not None:
                 wfptr.write(f"* {content.Content}\n")
 
             wfptr.write("\n")
 
-    with (boardDataDir / "boards.inc").open("w") as wfptr:
+    with (boardDataDir / "boards.inc").open("w", encoding="utf-8") as wfptr:
         for name in sortedBoardNames:
             content = boardsInfo[name]
             wfptr.write(f"{content.Label}\n{'='*len(content.Label)}\n\n")
