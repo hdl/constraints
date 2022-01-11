@@ -2,4 +2,5 @@ Label: Arty A7-35T
 PartNumber: 410-319
 Device: XC7A35T
 Package: ICSG324-1L
-Documentation: https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/
+Documentation:
+  "digilentinc.com: Arty A7: Artix-7 FPGA Development Board": https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/
