@@ -4,24 +4,36 @@ Usage
 #####
 
 This repository is expected to be added as a git submodule or otherwise vendored in existing HDL designs.
+Then, data and/or constraints files can be used straightaway, or through the helper Python scripts.
 
-The recommended approach is defining one top level source per board, on top of the design's top unit.
-To avoid ambiguity, we name the former ``BoardTop`` and the latter ``DesignTop``.
-The purpose of BoardTop is to describe board specific resources (PLLs, DCMs, RAM controllers, etc.) and type/polarity
-conversions, so that the DesignTop is unmodified for either simulation or implementation, with any tool and/or for any
-target board.
+.. figure:: _static/usage.png
+   :align: center
+   :target: https://github.com/hdl/constraints
 
-Responsibilities of a ``BoardTop`` component/module:
+   Example of the HDL source structure to use one design on three different FPGA boards, two of them having the same
+   FPGA device.
 
-* Normalize low-active signals to high-active signals.
-* I/O buffers, if needed.
-* Input synchronization.
-* Output flip-flops.
-* Converting a tristate-bus (I, O, T) to a bi-directional inout signal (and bi-directional buffer).
-* Debouncing and maybe edge-detection.
+As shown in the Figure, it is recommended to organise HDL sources in one or two levels of abstraction around the
+top-level unit of the logic design:
 
-Find examples in the following repositories:
+* **DesignTop**: the code which is mostly unmodified regardless of the task (simulation or implementation), the
+  tool, or the board/device.
+* **SystemTop**: description of device specific resources, such as PLLs, DCMs, RAM controllers, etc.
+* **BoardTop**: description of board specific resources and type/polarity conversions:
 
-* :ghrepo:`PLC2/Solution-StopWatch`
-* :ghrepo:`dbhi/vboard`
+  * Normalize low-active signals to high-active signals.
+  * I/O buffers, if needed.
+  * Input synchronization.
+  * Output flip-flops.
+  * Converting a tristate-bus (I, O, T) to a bi-directional inout signal (and bi-directional buffer).
+  * Debouncing and maybe edge-detection.
 
+.. TIP::
+  In less complex designs, ``SystemTop`` and ``BoardTop`` sources are typically merged in a single one.
+
+.. HINT::
+  Find examples in the following repositories:
+
+    * :ghrepo:`stnolting/neorv32-setups`
+    * :ghrepo:`PLC2/Solution-StopWatch`
+    * :ghrepo:`dbhi/vboard`
