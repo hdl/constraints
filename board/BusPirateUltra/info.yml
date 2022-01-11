@@ -1,3 +1,4 @@
 Label: BusPirate Ultra
 Device: ICE40-HX4K
-Documentation: https://github.com/DangerousPrototypes/BusPirateUltraHardware
+Documentation:
+  "gh:DangerousPrototypes/BusPirateUltraHardware": https://github.com/DangerousPrototypes/BusPirateUltraHardware
