@@ -2,7 +2,7 @@
 
 from sys import argv as sys_argv
 from pathlib import Path
-from typing import Dict, List, Union
+from typing import Dict, List, Optional, Union
 from dataclasses import dataclass
 from yaml import load as yaml_load, Loader as yaml_loader, dump as yaml_dump
 from re import findall as re_findall, M as re_M
@@ -12,7 +12,7 @@ rootDir = Path(__file__).resolve().parent
 boardInfoDir = rootDir / "board"
 
 
-def generatePerBoardMarkdownFileWithFrontmatter(contentDir):
+def generatePerBoardMarkdownFileWithFrontmatter(contentDir: Path) -> None:
     boardFileDir = contentDir / "boards"
     boardFileDir.mkdir(exist_ok=True)
 
@@ -86,7 +86,7 @@ class DeviceInfo:
     Resources: LogicResources = None
 
 
-def getBoardsInfo(verbose : bool = True):
+def getBoardsInfo(verbose : bool = True) -> Dict[str, BoardInfo]:
     boards = {}
 
     for item in boardInfoDir.glob("**/info.yml"):
@@ -110,6 +110,44 @@ def getBoardsInfo(verbose : bool = True):
             boards[item.parent.name] = BoardInfo(**yaml_load(frontmatter, yaml_loader))
 
     return boards
+
+
+class Constraints:
+    LPF: Union[str, List[str]] = None
+    PCF: Union[str, List[str]] = None
+    SDC: Union[str, List[str]] = None
+    UCF: Union[str, List[str]] = None
+    XDC: Union[str, List[str]] = None
+
+
+def getConstraintFiles(
+    boards: Union[List[str], Dict[str, BoardInfo]],
+    verbose: bool = True
+) -> Dict[str, Optional[Constraints]]:
+    constraints = {}
+    for name in boards:
+        files = [item for item in (boardInfoDir / name).iterdir() if item.stem != 'info']
+        if len(files) == 0:
+            constraints[name] = None
+            continue
+
+        boardConstraints = Constraints()
+        boardConstraints.LPF = [item.stem for item in files if item.suffix == '.lpf']
+        boardConstraints.PCF = [item.stem for item in files if item.suffix == '.pcf']
+        boardConstraints.SDC = [item.stem for item in files if item.suffix == '.sdc']
+        boardConstraints.UCF = [item.stem for item in files if item.suffix == '.ucf']
+        boardConstraints.XDC = [item.stem for item in files if item.suffix == '.xdc']
+        constraints[name] = boardConstraints
+
+        if verbose:
+            print(f'{name}:')
+            print('  LPF:', boardConstraints.LPF)
+            print('  PCF:', boardConstraints.PCF)
+            print('  SDC:', boardConstraints.SDC)
+            print('  UCF:', boardConstraints.UCF)
+            print('  XDC:', boardConstraints.XDC)
+
+    return constraints
 
 
 if __name__ == "__main__":
