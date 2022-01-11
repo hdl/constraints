@@ -1,5 +1,6 @@
 Label: CAT Board
 Device: ICE40-HX8K
 Package: CT256
-Documentation: https://github.com/xesscorp/CAT-Board
+Documentation:
+  "gh:xesscorp/CAT-Board": https://github.com/xesscorp/CAT-Board
 Prog: litterbox
