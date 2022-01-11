@@ -30,7 +30,7 @@ For each board, sets of constraint files are provided according to the following
 
 * Split pin constrains from per IP core timing constrains.
 * Group pin constrains per interface/connector (switches, LEDs, Ethernet, UART, etc.). This allows enabling/disabling interfaces by selecting which files to include.
-* Use vectors/arrays for unnamed ports, instead of numbering pins individually.
+* Use vectors/arrays for unnamed non-bidirectional ports, instead of numbering pins individually.
 * Prefix each port with the board name.
 * If an interface is fixed, include matching timing constraints. E.g. a button with ``set_false_path``, ``system_clock`` with 100 MHz, or GMII with the 2 ns delay.
 * Postfix low-active signals with ``_n``.
