@@ -1,3 +1,4 @@
 Label: DIPSY EPT
 Device: ICE40-HX1K
-Documentation: https://wiki.trenz-electronic.de/pages/viewpage.action?pageId=20611802
+Documentation:
+  "wiki.trenz-electronic.de: DIPSY EPT (Emulator Programmer Tool)": https://wiki.trenz-electronic.de/pages/viewpage.action?pageId=20611802
