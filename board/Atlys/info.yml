@@ -1,4 +1,6 @@
 Label: Atlys
+Description: Spartan-6 FPGA Trainer Board
 Device: XC6SLX45
 Package: CSG324C
-Documentation: https://reference.digilentinc.com/reference/programmable-logic/atlys/start
+Documentation:
+  "digilentinc.com: Atlys": https://reference.digilentinc.com/reference/programmable-logic/atlys/start
