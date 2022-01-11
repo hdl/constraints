@@ -38,7 +38,7 @@ contains data about those.
 
 .. toctree::
    :caption: Data
-   :hidden:
+   :maxdepth: 1
 
    Data/Boards/index
    Data/Devices
