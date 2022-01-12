@@ -15,7 +15,8 @@ def generateBoardPages():
     for name in sortedBoardNames:
         content = boardsInfo[name]
         with (boardDataDir / f"{name}.inc").open("w", encoding="utf-8") as wfptr:
-            wfptr.write("\n\n")
+            wfptr.write(f"\n\n.. _Boards:{name}:\n\n")
+            wfptr.write(f"{content.Label}\n{'='*len(content.Label)}\n\n")
 
             if content.Description is not None:
                 wfptr.write(f"*{content.Description}*\n\n")
@@ -92,6 +93,4 @@ def generateBoardPages():
 
     with (boardDataDir / "boards.inc").open("w", encoding="utf-8") as wfptr:
         for name in sortedBoardNames:
-            content = boardsInfo[name]
-            wfptr.write(f"{content.Label}\n{'='*len(content.Label)}\n\n")
             wfptr.write(f".. include:: {name}.inc\n\n")
