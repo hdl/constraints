@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parent
 
 sys_path.insert(0, abspath('.'))
 sys_path.insert(0, abspath('..'))
+sys_path.insert(0, abspath(str(ROOT.parent / 'openFPGALoader/doc')))
 
 
 from data import generateBoardPages
@@ -120,7 +121,8 @@ latex_documents = [
 # -- Sphinx.Ext.InterSphinx -----------------------------------------------
 
 intersphinx_mapping = {
-	'python':   ('https://docs.python.org/3', None),
+	'python':         ('https://docs.python.org/3', None),
+	'openfpgaloader': ('https://trabucayre.github.io/openFPGALoader/', None)
 }
 
 

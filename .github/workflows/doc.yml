@@ -21,6 +21,8 @@ jobs:
 
     - name: 🧰 Checkout
       uses: actions/checkout@v2
+      with:
+        submodules: recursive
 
     - name: 📓 Build The Docs
       uses: buildthedocs/btd@v0

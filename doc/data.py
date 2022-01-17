@@ -1,9 +1,14 @@
+from sys import path as sys_path
+from os.path import abspath
 from pathlib import Path
 
 from constraints import getBoardsInfo, getConstraintFiles, ProgItem
 
+# From submoduled openFPGALoader
+from boards import ReadDataFromYAML
 
-boardDataDir = Path(__file__).resolve().parent / "Data/Boards"
+ROOT = Path(__file__).resolve().parent
+boardDataDir = ROOT / "Data/Boards"
 
 
 def generateBoardPages():
@@ -11,6 +16,8 @@ def generateBoardPages():
     boardsInfo = getBoardsInfo()
     sortedBoardNames = sorted(boardsInfo, key=str.casefold)
     boardConstraints = getConstraintFiles(sortedBoardNames)
+
+    OFLData = ReadDataFromYAML()
 
     for name in sortedBoardNames:
         content = boardsInfo[name]
@@ -59,6 +66,22 @@ def generateBoardPages():
                     items = [content.Prog] if isinstance(content.Prog, str) else content.Prog
                     for item in items:
                         wfptr.write(f"  * {item}\n\n")
+
+            for OFLBoard in OFLData:
+                OFLConstraints = OFLBoard.Constraints
+                if OFLConstraints is not None:
+                    if isinstance(OFLConstraints, str):
+                        OFLConstraints = [OFLConstraints]
+                    if name in OFLConstraints:
+                        prefix = ''
+                        if content.Prog is None:
+                            wfptr.write("* **Programming**:\n\n")
+                        elif isinstance(content.Prog, ProgItem) and prog.Tools is not None:
+                            prefix = '  '
+                        wfptr.write(f"{prefix}  * openFPGALoader [:ref:`{OFLBoard.ID} <openfpgaloader:compatibility:boards>`]\n\n")
+                        wfptr.write(f"{prefix}    * Memory: {OFLBoard.Memory}\n\n")
+                        wfptr.write(f"{prefix}    * Flash: {OFLBoard.Flash}\n\n")
+                        break
 
             constraints = boardConstraints[name]
             if constraints is None:
