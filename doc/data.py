@@ -85,7 +85,7 @@ def generateBoardPages():
 
             constraints = boardConstraints[name]
             if constraints is None:
-                wfptr.write(f"* **Constraints**: :ghsrc:`board/{name} ✗`\n\n")
+                wfptr.write(f"* **Constraints**: :ghsrc:`board/{name} ✗ <board/{name}>`\n\n")
             else:
                 wfptr.write(f"* **Constraints**: :ghsrc:`board/{name}`\n\n")
                 if len(constraints.LPF) != 0:
