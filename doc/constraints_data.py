@@ -5,7 +5,7 @@ from pathlib import Path
 from constraints import getBoardsInfo, getConstraintFiles, ProgItem
 
 # From submoduled openFPGALoader
-from boards import ReadDataFromYAML
+from data import ReadBoardDataFromYAML
 
 ROOT = Path(__file__).resolve().parent
 boardDataDir = ROOT / "Data/Boards"
@@ -17,7 +17,7 @@ def generateBoardPages():
     sortedBoardNames = sorted(boardsInfo, key=str.casefold)
     boardConstraints = getConstraintFiles(sortedBoardNames)
 
-    OFLData = ReadDataFromYAML()
+    OFLData = ReadBoardDataFromYAML()
 
     for name in sortedBoardNames:
         content = boardsInfo[name]

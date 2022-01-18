@@ -10,7 +10,7 @@ sys_path.insert(0, abspath('..'))
 sys_path.insert(0, abspath(str(ROOT.parent / 'openFPGALoader/doc')))
 
 
-from data import generateBoardPages
+from constraints_data import generateBoardPages
 
 
 generateBoardPages()
