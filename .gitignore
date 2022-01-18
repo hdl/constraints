@@ -1,5 +1,7 @@
 __pycache__
 
-/doc/_build
-/doc/_theme
+/doc/_build/
+/doc/_theme/
 /doc/Data/Boards/*.inc
+
+/openFPGALoader/
