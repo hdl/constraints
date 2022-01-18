@@ -21,8 +21,9 @@ jobs:
 
     - name: 🧰 Checkout
       uses: actions/checkout@v2
-      with:
-        submodules: recursive
+
+    - name: 📮 Clone openFPGALoader
+      run: git clone https://github.com/trabucayre/openFPGALoader
 
     - name: 📓 Build The Docs
       uses: buildthedocs/btd@v0
