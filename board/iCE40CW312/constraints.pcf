@@ -1,0 +1,26 @@
+#| iCE40CW312
+
+set_io --warn-no-port iCE40CW312_CLK B3
+
+#> UART
+set_io --warn-no-port iCE40CW312_TX E5
+set_io --warn-no-port iCE40CW312_RX D5
+
+
+#> SPI [user port]
+set_io --warn-no-port iCE40CW312_SPI_SDO F1
+set_io --warn-no-port iCE40CW312_SPI_SCK D1
+set_io --warn-no-port iCE40CW312_SPI_CSN C1
+set_io --warn-no-port iCE40CW312_SPI_SDI E1
+
+
+#> GPIO [input]
+set_io --warn-no-port iCE40CW312_GPIO_I[0] A5
+set_io --warn-no-port iCE40CW312_GPIO_I[1] A1
+
+
+#> GPIO [output]
+set_io --warn-no-port iCE40CW312_GPIO_O[0] A5
+set_io --warn-no-port iCE40CW312_GPIO_O[1] A1
+
+

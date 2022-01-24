@@ -1,0 +1,6 @@
+#| iCE40CW312
+
+
+#> UART
+set_io --warn-no-port iCE40CW312_TX E5
+set_io --warn-no-port iCE40CW312_RX D5

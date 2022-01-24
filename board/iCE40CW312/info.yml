@@ -1,0 +1,5 @@
+Label: iCE40CW312
+Device: ICE40-UP5K
+Package: UWG30
+Documentation:
+  "gh:newaetech/chipwhisperer-target-cw308t/CW312T_ICE40UP": newaetech/chipwhisperer-target-cw308t/CW312T_ICE40UP"
