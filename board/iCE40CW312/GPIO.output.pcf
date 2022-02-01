@@ -1,0 +1,6 @@
+#| iCE40CW312
+
+
+#> GPIO [output]
+set_io --warn-no-port iCE40CW312_GPIO_O[0] A5
+set_io --warn-no-port iCE40CW312_GPIO_O[1] A1

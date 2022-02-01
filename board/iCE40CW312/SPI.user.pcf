@@ -1,0 +1,8 @@
+#| iCE40CW312
+
+
+#> SPI [user port]
+set_io --warn-no-port iCE40CW312_SPI_SDO F1
+set_io --warn-no-port iCE40CW312_SPI_SCK D1
+set_io --warn-no-port iCE40CW312_SPI_CSN C1
+set_io --warn-no-port iCE40CW312_SPI_SDI E1
