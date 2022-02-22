@@ -1,0 +1,5 @@
+Label: Colorlight i9-v7.2
+Device: ECP5-45F
+Package: BGA381
+Documentation: https://github.com/wuxx/Colorlight-FPGA-Projects
+Prog: DAPLink
