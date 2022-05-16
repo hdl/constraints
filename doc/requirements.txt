@@ -1,3 +1,4 @@
+-r ../requirements.txt
 -r ../openFPGALoader/doc/requirements.txt
 
 sphinx
