@@ -19,7 +19,7 @@ generateBoardPages()
 # -- Project information --------------------------------------------------
 
 project =   "FPGA Board Constraints"
-copyright = "2021-2021 The HDL Authors"
+copyright = "2021-2022 The HDL Authors"
 author =    "The HDL Authors"
 
 version = "latest" # The short X.Y version.
