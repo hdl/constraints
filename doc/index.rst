@@ -44,3 +44,9 @@ contains data about those.
    Data/Devices
    Data/Flash
    Data/SDRAM
+
+.. toctree::
+  :caption: Appendix
+  :hidden:
+
+  References
