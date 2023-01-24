@@ -1,7 +1,7 @@
 <p align="center">
   <a title="hdl.github.io/constraints" href="https://hdl.github.io/constraints"><img src="https://img.shields.io/website?longCache=true&style=flat-square&label=hdl.github.io%2Fconstraints&logo=GitHub&logoColor=fff&up_color=blueviolet&up_message=Read%20now%20%E2%9E%9A&url=https%3A%2F%2Fhdl.github.io%2Fconstraints%2Findex.html"></a><!--
   -->
-  <a title="GitHub Actions workflow 'Doc'" href="https://github.com/hdl/constraints/actions?query=workflow%3ADoc"><img src="https://img.shields.io/github/workflow/status/hdl/constraints/Doc/main?longCache=true&style=flat-square&label=Doc&logo=GitHub%20Actions&logoColor=fff"></a><!--
+  <a title="GitHub Actions workflow 'Doc'" href="https://github.com/hdl/constraints/actions/workflows/Doc"><img src="https://img.shields.io/github/actions/workflow/status/hdl/constraints/doc.yml?branch=main&longCache=true&style=flat-square&label=Doc&logo=GitHub%20Actions&logoColor=fff"></a><!--
   -->
   <a title="hdl/packages GitHub repository" href="https://github.com/hdl/packages"><img src="https://img.shields.io/badge/hdl-packages-f2f1ef.svg?longCache=true&style=flat-square&logo=GitHub&logoColor=f2f1ef"></a><!--
   -->
