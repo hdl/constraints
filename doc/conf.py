@@ -129,8 +129,8 @@ intersphinx_mapping = {
 # -- Sphinx.Ext.ExtLinks --------------------------------------------------
 
 extlinks = {
-	'ghrepo':  ('https://github.com/%s', ''),
-	'ghissue': ('https://github.com/hdl/constraints/issues/%s', 'issue #'),
-	'ghpull':  ('https://github.com/hdl/constraints/pull/%s', 'pull request #'),
-	'ghsrc':   ('https://github.com/hdl/constraints/blob/main/%s', ''),
+	'ghrepo':  ('https://github.com/%s', '%s'),
+	'ghissue': ('https://github.com/hdl/constraints/issues/%s', 'issue #%s'),
+	'ghpull':  ('https://github.com/hdl/constraints/pull/%s', 'pull request #%s'),
+	'ghsrc':   ('https://github.com/hdl/constraints/blob/main/%s', '%s'),
 }
