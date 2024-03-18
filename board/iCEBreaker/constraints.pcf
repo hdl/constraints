@@ -44,6 +44,9 @@ set_io --warn-no-port iCEBreaker_LED_R 39
 set_io --warn-no-port iCEBreaker_LED_G 40
 set_io --warn-no-port iCEBreaker_LED_B 41
 
+#> On-board LEDs
+set_io --warn-no-port iCEBreaker_BOARD_LED_R 11
+set_io --warn-no-port iCEBreaker_BOARD_LED_G 37
 
 #> User Reset Button
 set_io --warn-no-port iCEBreaker_USR_RST_BTN 10
