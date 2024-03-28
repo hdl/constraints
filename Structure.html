@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Structure of the repository &mdash; FPGA Board Constraints latest documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/documentation_options.js?v=c6e86fd7"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Usage" href="Usage.html" />
+    <link rel="prev" title="The FPGA Board Constraints Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> FPGA Board Constraints
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Structure of the repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Attributes.html">HDL attributes/annotations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Similar.html">Similar resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ProgDebug.html">Programming and debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Data/Boards/index.html">Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data/Devices.html">Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data/Flash.html">Flash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data/SDRAM.html">SDRAM</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="References.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">FPGA Board Constraints</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+        
+          
+            <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Structure of the repository</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/hdl/constraints/blob/main/doc/Structure.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="structure-of-the-repository">
+<span id="structure"></span><h1>Structure of the repository<a class="headerlink" href="#structure-of-the-repository" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">board/</span></code>: a subdir for each board</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;BOARDNAME&gt;</span></code>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">info.yml</span></code> or <code class="docutils literal notranslate"><span class="pre">info.md</span></code>: board data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;CONSTRAINT_FILE(S)&gt;</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device/</span></code>: a subdir for each device</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;DEVICENAME&gt;</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">info.yml</span></code>: device data</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Types of constraint files:</p>
+<ul class="simple">
+<li><p>Physical Constraints File (<code class="docutils literal notranslate"><span class="pre">*.pcf</span></code>) for Lattice IceCube2.</p></li>
+<li><p>Lattice Preference File (<code class="docutils literal notranslate"><span class="pre">*.lpf</span></code>) for Lattice Diamond.</p></li>
+<li><p>User Constraint Files (<code class="docutils literal notranslate"><span class="pre">*.ucf</span></code>) for Xilinx ISE ≤14.7.</p></li>
+<li><p>Xilinx Design Constraints (<code class="docutils literal notranslate"><span class="pre">*.xdc</span></code>) for Xilinx Vivado.</p></li>
+<li><p>Synopsis Design Constraints (<code class="docutils literal notranslate"><span class="pre">*.sdc</span></code>) for Intel Quartus Prime (formerly Altera Quartus-II).</p></li>
+<li><p>Physical Design Constraints (<code class="docutils literal notranslate"><span class="pre">*.pdc</span></code>) for Microsemi Libero-SoC.</p></li>
+</ul>
+<p>For each board, sets of constraint files are provided according to the following rules:</p>
+<ul class="simple">
+<li><p>Split pin constrains from per IP core timing constrains.</p></li>
+<li><p>Group pin constrains per interface/connector (switches, LEDs, Ethernet, UART, etc.). This allows enabling/disabling interfaces by selecting which files to include.</p></li>
+<li><p>Use vectors/arrays for unnamed non-bidirectional ports, instead of numbering pins individually.</p></li>
+<li><p>Prefix each port with the board name.</p></li>
+<li><p>If an interface is fixed, include matching timing constraints. E.g. a button with <code class="docutils literal notranslate"><span class="pre">set_false_path</span></code>, <code class="docutils literal notranslate"><span class="pre">system_clock</span></code> with 100 MHz, or GMII with the 2 ns delay.</p></li>
+<li><p>Postfix low-active signals with <code class="docutils literal notranslate"><span class="pre">_n</span></code>.</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="The FPGA Board Constraints Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Usage.html" class="btn btn-neutral float-right" title="Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-2022 The HDL Authors.
+      <span class="lastupdated">Last updated on 2024.03.28.
+      </span></p>
+  </div>Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/buildthedocs/sphinx.theme">theme</a>
+    provided by <a href="https://buildthedocs.github.io">Build the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

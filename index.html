@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The FPGA Board Constraints Documentation &mdash; FPGA Board Constraints latest documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/documentation_options.js?v=c6e86fd7"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Structure of the repository" href="Structure.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> FPGA Board Constraints
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Structure.html">Structure of the repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Attributes.html">HDL attributes/annotations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Similar.html">Similar resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ProgDebug.html">Programming and debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Data/Boards/index.html">Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data/Devices.html">Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data/Flash.html">Flash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data/SDRAM.html">SDRAM</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="References.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">FPGA Board Constraints</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+        
+          
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-fpga-board-constraints-documentation">
+<h1>The FPGA Board Constraints Documentation<a class="headerlink" href="#the-fpga-board-constraints-documentation" title="Link to this heading">¶</a></h1>
+<a class="reference external image-reference" href="https://github.com/hdl/constraints"><img alt="_images/banner.png" class="align-center" src="_images/banner.png" style="height: 90px;" /></a>
+<br><p class="centered">
+<strong><a class="reference external" href="https://github.com/hdl/constraints"><img alt="hdl/constraints on github" src="https://img.shields.io/badge/hdl-constraints-f2f1ef.svg?longCache=true&amp;style=flat-square&amp;logo=GitHub&amp;logoColor=f2f1ef" style="height: 22px;" /></a> <a class="reference external" href="https://github.com/hdl/packages"><img alt="hdl/packages on github" src="https://img.shields.io/badge/hdl-packages-f2f1ef.svg?longCache=true&amp;style=flat-square&amp;logo=GitHub&amp;logoColor=f2f1ef" style="height: 22px;" /></a> <a class="reference external" href="https://github.com/hdl/awesome"><img alt="hdl/awesome on github" src="https://img.shields.io/badge/hdl-awesome-f2f1ef.svg?longCache=true&amp;style=flat-square&amp;logo=GitHub&amp;logoColor=f2f1ef" style="height: 22px;" /></a> <a class="reference external" href="https://gitter.im/hdl/community"><img alt="Documentation License" src="https://img.shields.io/badge/chat-on%20gitter-4db797.svg?longCache=true&amp;style=flat-square&amp;logo=gitter&amp;logoColor=e8ecef" style="height: 22px;" /></a></strong></p><p>Hardware Description Language (HDL) designs prototyped on FPGAs are constrained by the devices and interfaces available
+on the development boards.
+Most of the constraints are tied to the physical characteristics and not to the logic design.
+Therefore, the maintenance burden of projects to be tested on multiple boards can be reduced by sharing constraint
+definition files.
+This repository provides constraint definitions in a standardised and distributed format, for decoupling board details
+from design sources.
+Unlike other similar solutions, these resources are not tied to any specific project management tool.</p>
+<p>On top of pinout and I/O constraints, programming/configuring development boards implies dealing with external memories
+(either flash or SDRAM) and typically debugging the SoC designs using JTAG, GDB, etc. Hence, this repository also
+contains data about those.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Structure.html">Structure of the repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Contributing.html#future-work">Future work</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Attributes.html">HDL attributes/annotations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Attributes.html#vhdl">VHDL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Attributes.html#verilog">Verilog</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Similar.html">Similar resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Similar.html#vlsi-eda-poc">VLSI-EDA/PoC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Similar.html#inti-cmnb-fpga-fpga-lib">INTI-CMNB-FPGA/fpga_lib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Similar.html#ghdl-ghdl-yosys-plugin">ghdl/ghdl-yosys-plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Similar.html#litex-hub-litex-boards">litex-hub/litex-boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Similar.html#amaranth-lang-amaranth-boards">amaranth-lang/amaranth-boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Similar.html#symbiflow-yosys-symbiflow-plugins">SymbiFlow/yosys-symbiflow-plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Similar.html#olofk-fusesoc">olofk/fusesoc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Similar.html#xilinx-xilinxboardstore">Xilinx/XilinxBoardStore</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ProgDebug.html">Programming and debugging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ProgDebug.html#dfu-util">dfu-util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProgDebug.html#ecpprog">ecpprog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProgDebug.html#fujprog">fujprog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProgDebug.html#iceprog-icestorm">iceprog (IceStorm)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProgDebug.html#icesprog-icesugar">icesprog (iCESugar)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProgDebug.html#openfpgaloader-ofl">openFPGALoader (OFL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProgDebug.html#openocd">OpenOCD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProgDebug.html#pyocd">pyOCD</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Data/Boards/index.html">Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data/Devices.html">Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data/Flash.html">Flash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data/SDRAM.html">SDRAM</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Structure.html" class="btn btn-neutral float-right" title="Structure of the repository" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-2022 The HDL Authors.
+      <span class="lastupdated">Last updated on 2024.03.28.
+      </span></p>
+  </div>Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/buildthedocs/sphinx.theme">theme</a>
+    provided by <a href="https://buildthedocs.github.io">Build the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

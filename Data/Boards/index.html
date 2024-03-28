@@ -1,0 +1,2372 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boards &mdash; FPGA Board Constraints latest documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/documentation_options.js?v=c6e86fd7"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Devices" href="../Devices.html" />
+    <link rel="prev" title="Programming and debugging" href="../../ProgDebug.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> FPGA Board Constraints
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Structure.html">Structure of the repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Attributes.html">HDL attributes/annotations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Similar.html">Similar resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ProgDebug.html">Programming and debugging</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Boards</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ac701">AC701</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#alchitry-cu">Alchitry Cu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arctickoala">ArcticKoala</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arty-a7-100t">Arty A7-100T</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arty-a7-35t">Arty A7-35T</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arty-s7-25">Arty S7-25</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arty-s7-50">Arty S7-50</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#atlys">Atlys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beaglewire">BeagleWire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mystorm-blackice">myStorm BlackIce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mystorm-blackice-ii">myStorm BlackIce II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mystorm-blackice-mx">myStorm BlackIce MX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#buspirate-ultra">BusPirate Ultra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#butterstick-r1-0-85f">ButterStick-r1.0-85F</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cat-board">CAT Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#colorlight-i5-v7-0">Colorlight i5-v7.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#colorlight-i9-v7-2">Colorlight i9-v7.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#de4">DE4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dipsy-ept">DIPSY EPT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#doppler">doppler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dsp-ice">DSP_ICE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ecp5-evn">ECP5-EVN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ecpix-5-45f">ECPIX-5 45F</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ecpix-5-85f">ECPIX-5 85F</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#edu-ciaa-fpga">EDU-CIAA-FPGA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fomu-pvt">Fomu PVT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fpga-101-workshop-badge-board">FPGA 101 Workshop Badge Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glasgow-revc">Glasgow revC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hx4k-pmod-breakout">HX4K PMOD Breakout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ice40-feather-r0-2">iCE40 Feather r0.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ice40-hx8k-breakout-board">iCE40-HX8K Breakout Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ice40-ultraplus-breakout-board">iCE40 UltraPlus Breakout Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ice40cw312">iCE40CW312</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#olimex-ice40hx1k-evb">Olimex iCE40HX1K-EVB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#olimex-ice40hx8k-evb">Olimex iCE40HX8K-EVB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#iceblink40-hx1k-evaluation-kit">iCEblink40-HX1K Evaluation Kit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#icebreaker">iCEBreaker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#icebreaker-bitsy-v0">iCEBreaker bitsy v0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#icebreaker-bitsy-v1">iCEBreaker bitsy v1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#icecream-1-0">ICECREAM-1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#icecream-1-2">ICECREAM-1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#icefun">iceFUN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#icestick-evaluation-kit">iCEstick Evaluation Kit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#icesugar-nano">iCESugar-nano</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#icesugar-pro">iCESugar-pro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#icesugar-v1-5">iCESugar v1.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#icezero">IceZero</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#icezum-alhambra">IceZUM Alhambra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#icezum-alhambra-ii">IceZUM Alhambra II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#icoboard-v1-0">icoBOARD v1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kc705">KC705</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kefir-i-ice40-hx4k">Kéfir I iCE40-HX4K</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#litefury">Litefury</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#manila-ice">manila iCE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mercury-2-a7-100t">Mercury 2 A7-100T</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mercury-2-a7-35t">Mercury 2 A7-35T</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ml505">ML505</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ml506">ML506</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ml605">ML605</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mnt-reform-kintex-7-som">MNT Reform Kintex-7 SoM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nandland-go-board">Nandland Go board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nexys-4">Nexys 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nexys-4-ddr">Nexys 4 DDR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#openfpga">openFPGA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#orangecrab-r0-2-25f">OrangeCrab-r0.2-25F</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pergola">Pergola</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#picoevb">PicoEVB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pygmy-stamp-board">Pygmy Stamp Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#qomu">Qomu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quickfeather">QuickFeather</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spartan-3-starter-kit">Spartan-3 Starter Kit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tinyfpga-b2">TinyFPGA B2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tinyfpga-bx">TinyFPGA-BX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ulx3s-12f">ULX3S 12F</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ulx3s-25f">ULX3S 25F</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ulx3s-45f">ULX3S 45F</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ulx3s-85f">ULX3S 85F</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upduino-v1-0">UPDuino v1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upduino-v2-0">UPDuino v2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upduino-v2-1">UPDuino v2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upduino-v3-0">UPDuino v3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vc707">VC707</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#xupv5">XUPV5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#zc706">ZC706</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#zedboard">ZedBoard</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Devices.html">Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flash.html">Flash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SDRAM.html">SDRAM</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../References.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FPGA Board Constraints</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+        
+          
+            <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Boards</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/hdl/constraints/blob/main/doc/Data/Boards/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="boards">
+<span id="data-boards"></span><h1>Boards<a class="headerlink" href="#boards" title="Link to this heading">¶</a></h1>
+<section id="ac701">
+<span id="boards-ac701"></span><h2>AC701<a class="headerlink" href="#ac701" title="Link to this heading">¶</a></h2>
+<p><em>Xilinx Artix-7 FPGA AC701 Evaluation Kit</em></p>
+<ul class="simple">
+<li><p><strong>Part Number</strong>: EK-A7-AC701-G</p></li>
+<li><p><strong>Device</strong>: XC7A200T-2</p></li>
+<li><p><strong>Package</strong>: FBG676C</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.xilinx.com/products/boards-and-kits/ek-a7-ac701-g.html">xilinx.com: Xilinx Artix-7 FPGA AC701 Evaluation Kit</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">ac701</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: NT</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/AC701">board/AC701</a></p>
+<ul>
+<li><p><strong>XDC</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/AC701/Bus.IIC.xdc">Bus » IIC</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/AC701/FanControl.xdc">FanControl</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/AC701/GPIO.LED.xdc">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/AC701/GPIO.Button.Special.xdc">GPIO » Button » Special</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/AC701/Clock.SystemClock.xdc">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/AC701/USB_UART.xdc">USB_UART</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="alchitry-cu">
+<span id="boards-alchitry-cu"></span><h2>Alchitry Cu<a class="headerlink" href="#alchitry-cu" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX8K</p></li>
+<li><p><strong>Package</strong>: CB132</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://alchitry.com/boards/cu">alchitry.com: Alchitry Cu</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6010</p></li>
+<li><p><strong>Description</strong>: Alchitry Cu</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprog</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Alchitry-Cu">board/Alchitry-Cu ✗</a></p></li>
+</ul>
+</section>
+<section id="arctickoala">
+<span id="boards-arctickoala"></span><h2>ArcticKoala<a class="headerlink" href="#arctickoala" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: CrossLinkNX-LIFCL-40</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/gregdavill/ArcticKoala">gh:gregdavill/ArcticKoala</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ArcticKoala">board/ArcticKoala ✗</a></p></li>
+</ul>
+</section>
+<section id="arty-a7-100t">
+<span id="boards-arty-a7-100t"></span><h2>Arty A7-100T<a class="headerlink" href="#arty-a7-100t" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Part Number</strong>: 410-319</p></li>
+<li><p><strong>Device</strong>: XC7A100T</p></li>
+<li><p><strong>Package</strong>: ICSG324-1L</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/">digilentinc.com: Arty A7: Artix-7 FPGA Development Board</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">arty_a7_100t</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Arty-A7-100T">board/Arty-A7-100T ✗</a></p></li>
+</ul>
+</section>
+<section id="arty-a7-35t">
+<span id="boards-arty-a7-35t"></span><h2>Arty A7-35T<a class="headerlink" href="#arty-a7-35t" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Part Number</strong>: 410-319</p></li>
+<li><p><strong>Device</strong>: XC7A35T</p></li>
+<li><p><strong>Package</strong>: ICSG324-1L</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://store.digilentinc.com/arty-a7-artix-7-fpga-development-board-for-makers-and-hobbyists/">digilentinc.com: Arty A7: Artix-7 FPGA Development Board</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">arty_a7_35t</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Arty-A7-35T">board/Arty-A7-35T</a></p>
+<ul>
+<li><p><strong>XDC</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Arty-A7-35T/Bus.SPI.xdc">Bus » SPI</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Arty-A7-35T/GPIO.LED.RGB.xdc">GPIO » LED » RGB</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Arty-A7-35T/GPIO.LED.xdc">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Arty-A7-35T/GPIO.Button.Special.xdc">GPIO » Button » Special</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Arty-A7-35T/Clock.SystemClock.xdc">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Arty-A7-35T/USB_UART.xdc">USB_UART</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="arty-s7-25">
+<span id="boards-arty-s7-25"></span><h2>Arty S7-25<a class="headerlink" href="#arty-s7-25" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Part Number</strong>: 410-352</p></li>
+<li><p><strong>Device</strong>: XC7S25</p></li>
+<li><p><strong>Package</strong>: CSGA324</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://store.digilentinc.com/arty-s7-spartan-7-fpga-board-for-hobbyists-and-makers/">digilentinc.com: Arty S7: Spartan-7 FPGA Development Board</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">arty_s7_25</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Arty-S7-25">board/Arty-S7-25 ✗</a></p></li>
+</ul>
+</section>
+<section id="arty-s7-50">
+<span id="boards-arty-s7-50"></span><h2>Arty S7-50<a class="headerlink" href="#arty-s7-50" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Part Number</strong>: 410-352</p></li>
+<li><p><strong>Device</strong>: XC7S50</p></li>
+<li><p><strong>Package</strong>: CSGA324</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://store.digilentinc.com/arty-s7-spartan-7-fpga-board-for-hobbyists-and-makers/">digilentinc.com: Arty S7: Spartan-7 FPGA Development Board</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">arty_s7_50</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Arty-S7-50">board/Arty-S7-50</a></p>
+<ul>
+<li><p><strong>XDC</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Arty-S7-50/Bus.SPI.xdc">Bus » SPI</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Arty-S7-50/GPIO.LED.RGB.xdc">GPIO » LED » RGB</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Arty-S7-50/GPIO.LED.xdc">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Arty-S7-50/GPIO.Button.Special.xdc">GPIO » Button » Special</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Arty-S7-50/Clock.SystemClock.xdc">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Arty-S7-50/USB_UART.xdc">USB_UART</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="atlys">
+<span id="boards-atlys"></span><h2>Atlys<a class="headerlink" href="#atlys" title="Link to this heading">¶</a></h2>
+<p><em>Spartan-6 FPGA Trainer Board</em></p>
+<ul class="simple">
+<li><p><strong>Device</strong>: XC6SLX45</p></li>
+<li><p><strong>Package</strong>: CSG324C</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://reference.digilentinc.com/reference/programmable-logic/atlys/start">digilentinc.com: Atlys</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Atlys">board/Atlys</a></p>
+<ul>
+<li><p><strong>UCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Atlys/Clock.SystemClock.ucf">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Atlys/HDMI.RX.ucf">HDMI » RX</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Atlys/HDMI.TX.ucf">HDMI » TX</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Atlys/Bus.IIC.ucf">Bus » IIC</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Atlys/GPIO.Button.Cursor.ucf">GPIO » Button » Cursor</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Atlys/USB_UART.ucf">USB_UART</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Atlys/GPIO.LED.ucf">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Atlys/GPIO.Button.Special.ucf">GPIO » Button » Special</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Atlys/Default.ucf">Default</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Atlys/EthernetPHY.RGMII.ucf">EthernetPHY » RGMII</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Atlys/GPIO.Switch.ucf">GPIO » Switch</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Atlys/EthernetPHY.ucf">EthernetPHY</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Atlys/EthernetPHY.GMII.ucf">EthernetPHY » GMII</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="beaglewire">
+<span id="boards-beaglewire"></span><h2>BeagleWire<a class="headerlink" href="#beaglewire" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX4K</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://elinux.org/BeagleBoard/BeagleWire">elinux.org: BeagleWire</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/BeagleWire">board/BeagleWire ✗</a></p></li>
+</ul>
+</section>
+<section id="mystorm-blackice">
+<span id="boards-blackice"></span><h2>myStorm BlackIce<a class="headerlink" href="#mystorm-blackice" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX8K</p></li>
+<li><p><strong>Package</strong>: TQ144</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://gitlab.com/Folknology/mystorm/-/tree/BlackIce">gl:Folknology/mystorm: BlackIce</a></p></li>
+<li><p><a class="reference external" href="https://hackaday.io/project/12930-blackice-low-cost-open-hardware-fpga-dev-board">hackaday.io: BlackIce - Low Cost Open Hardware FPGA Dev Board</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0483:5740</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>blackiceprog</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/BlackIce">board/BlackIce ✗</a></p></li>
+</ul>
+</section>
+<section id="mystorm-blackice-ii">
+<span id="boards-blackice-ii"></span><h2>myStorm BlackIce II<a class="headerlink" href="#mystorm-blackice-ii" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX8K</p></li>
+<li><p><strong>Package</strong>: TQ144</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/mystorm-org/BlackIce-II">gh:mystorm-org/BlackIce-II</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0483:5740</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>blackiceprog</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/BlackIce-II">board/BlackIce-II ✗</a></p></li>
+</ul>
+</section>
+<section id="mystorm-blackice-mx">
+<span id="boards-blackice-mx"></span><h2>myStorm BlackIce MX<a class="headerlink" href="#mystorm-blackice-mx" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX8K</p></li>
+<li><p><strong>Package</strong>: TQ144</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/folknology/IceCore">gh:folknology/IceCore</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0483:5740</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>blackiceprog</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/BlackIce-MX">board/BlackIce-MX ✗</a></p></li>
+</ul>
+</section>
+<section id="buspirate-ultra">
+<span id="boards-buspirateultra"></span><h2>BusPirate Ultra<a class="headerlink" href="#buspirate-ultra" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX4K</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/DangerousPrototypes/BusPirateUltraHardware">gh:DangerousPrototypes/BusPirateUltraHardware</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/BusPirateUltra">board/BusPirateUltra ✗</a></p></li>
+</ul>
+</section>
+<section id="butterstick-r1-0-85f">
+<span id="boards-butterstick-r1-0"></span><h2>ButterStick-r1.0-85F<a class="headerlink" href="#butterstick-r1-0-85f" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ECP5-85F</p></li>
+<li><p><strong>Package</strong>: CABGA381</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/butterstick-fpga/butterstick-hardware">gh:butterstick-fpga/butterstick-hardware</a></p></li>
+<li><p><a class="reference external" href="https://groupgets.com/campaigns/868-butterstick">groupgets.com: ButterStick by Good Stuff Department</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 1209:5af1</p></li>
+<li><p><strong>Description</strong>: Butterstick (dfu v1.1)</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>openocd</p></li>
+<li><p>dfu-util</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ButterStick-r1.0">board/ButterStick-r1.0 ✗</a></p></li>
+</ul>
+</section>
+<section id="cat-board">
+<span id="boards-cat-board"></span><h2>CAT Board<a class="headerlink" href="#cat-board" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX8K</p></li>
+<li><p><strong>Package</strong>: CT256</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/xesscorp/CAT-Board">gh:xesscorp/CAT-Board</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>litterbox</p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/CAT-Board">board/CAT-Board ✗</a></p></li>
+</ul>
+</section>
+<section id="colorlight-i5-v7-0">
+<span id="boards-colorlight-i5-v7-0"></span><h2>Colorlight i5-v7.0<a class="headerlink" href="#colorlight-i5-v7-0" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ECP5-25F</p></li>
+<li><p><strong>Package</strong>: BGA381</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/wuxx/Colorlight-FPGA-Projects">https://github.com/wuxx/Colorlight-FPGA-Projects</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>DAPLink</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">colorlight-i5</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Colorlight-i5-v7.0">board/Colorlight-i5-v7.0 ✗</a></p></li>
+</ul>
+</section>
+<section id="colorlight-i9-v7-2">
+<span id="boards-colorlight-i9-v7-2"></span><h2>Colorlight i9-v7.2<a class="headerlink" href="#colorlight-i9-v7-2" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ECP5-45F</p></li>
+<li><p><strong>Package</strong>: BGA381</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/wuxx/Colorlight-FPGA-Projects">https://github.com/wuxx/Colorlight-FPGA-Projects</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>DAPLink</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">colorlight-i9</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Colorlight-i9-v7.2">board/Colorlight-i9-v7.2 ✗</a></p></li>
+</ul>
+</section>
+<section id="de4">
+<span id="boards-de4"></span><h2>DE4<a class="headerlink" href="#de4" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/DE4">board/DE4</a></p>
+<ul>
+<li><p><strong>SDC</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/DE4/GPIO.Button.Special.sdc">GPIO » Button » Special</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/DE4/FanControl.sdc">FanControl</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/DE4/Clock.SystemClock.sdc">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/DE4/Bus.IIC.EEPROM.sdc">Bus » IIC » EEPROM</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/DE4/GPIO.LED.sdc">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/DE4/GPIO.Button.sdc">GPIO » Button</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/DE4/GPIO.DipSwitch.sdc">GPIO » DipSwitch</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/DE4/GPIO.SlideSwitch.sdc">GPIO » SlideSwitch</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/DE4/UART.sdc">UART</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/DE4/Bus.SMBus.sdc">Bus » SMBus</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/DE4/GPIO.Seg7.sdc">GPIO » Seg7</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="dipsy-ept">
+<span id="boards-dipsy-ept"></span><h2>DIPSY EPT<a class="headerlink" href="#dipsy-ept" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX1K</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://wiki.trenz-electronic.de/pages/viewpage.action?pageId=20611802">wiki.trenz-electronic.de: DIPSY EPT (Emulator Programmer Tool)</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/DIPSY-EPT">board/DIPSY-EPT ✗</a></p></li>
+</ul>
+</section>
+<section id="doppler">
+<span id="boards-doppler"></span><h2>doppler<a class="headerlink" href="#doppler" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-UP5K</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/dadamachines/doppler/tree/master/hardware">gh:dadamachines/doppler: hardware</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/doppler">board/doppler ✗</a></p></li>
+</ul>
+</section>
+<section id="dsp-ice">
+<span id="boards-dsp-ice"></span><h2>DSP_ICE<a class="headerlink" href="#dsp-ice" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX8K</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/tvelliott/dsp_ice">https://github.com/tvelliott/dsp_ice</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/DSP_ICE">board/DSP_ICE ✗</a></p></li>
+</ul>
+</section>
+<section id="ecp5-evn">
+<span id="boards-ecp5-evn"></span><h2>ECP5-EVN<a class="headerlink" href="#ecp5-evn" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">ecp5_evn</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ECP5-EVN">board/ECP5-EVN</a></p>
+<ul>
+<li><p><strong>LPF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ECP5-EVN/constraints.lpf">constraints</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="ecpix-5-45f">
+<span id="boards-ecpix-5-45f"></span><h2>ECPIX-5 45F<a class="headerlink" href="#ecpix-5-45f" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ECP5-45F</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://shop.lambdaconcept.com/home/46-1-ecpix-5.html#/1-ecpix_5_fpga-ecpix_5_45f">https://shop.lambdaconcept.com/home/46-1-ecpix-5.html#/1-ecpix_5_fpga-ecpix_5_45f</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">ecpix5</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ECPIX-5-45F">board/ECPIX-5-45F ✗</a></p></li>
+</ul>
+</section>
+<section id="ecpix-5-85f">
+<span id="boards-ecpix-5-85f"></span><h2>ECPIX-5 85F<a class="headerlink" href="#ecpix-5-85f" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ECP5-85F</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://shop.lambdaconcept.com/home/46-2-ecpix-5.html#/2-ecpix_5_fpga-ecpix_5_85f">https://shop.lambdaconcept.com/home/46-2-ecpix-5.html#/2-ecpix_5_fpga-ecpix_5_85f</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">ecpix5</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ECPIX-5-85F">board/ECPIX-5-85F ✗</a></p></li>
+</ul>
+</section>
+<section id="edu-ciaa-fpga">
+<span id="boards-edu-ciaa-fpga"></span><h2>EDU-CIAA-FPGA<a class="headerlink" href="#edu-ciaa-fpga" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX4K</p></li>
+<li><p><strong>Package</strong>: TQ144</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-fpga">http://www.proyecto-ciaa.com.ar/devwiki/doku.php?id=desarrollo:edu-fpga</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6010</p></li>
+<li><p><strong>Description</strong>: Dual RS232-HS</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprog</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/EDU-CIAA-FPGA">board/EDU-CIAA-FPGA ✗</a></p></li>
+</ul>
+</section>
+<section id="fomu-pvt">
+<span id="boards-fomu-pvt"></span><h2>Fomu PVT<a class="headerlink" href="#fomu-pvt" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-UP5K</p></li>
+<li><p><strong>Package</strong>: UWG30</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/im-tomu/fomu-hardware">gh:im-tomu/fomu-hardware</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 1209:5bf0</p></li>
+<li><p><strong>Description</strong>: Fomu PVT running DFU Bootloader</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>dfu-util</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">fomu</span></a>]</p>
+<ul>
+<li><p>Memory: NA</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Fomu-PVT">board/Fomu-PVT</a></p>
+<ul>
+<li><p><strong>PCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Fomu-PVT/USB.pcf">USB</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Fomu-PVT/Clock.SystemClock.pcf">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Fomu-PVT/Bus.SPI.pcf">Bus » SPI</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Fomu-PVT/GPIO.Buttons.pcf">GPIO » Buttons</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Fomu-PVT/GPIO.TriLED.pcf">GPIO » TriLED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Fomu-PVT/constraints.pcf">constraints</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="fpga-101-workshop-badge-board">
+<span id="boards-fpga101"></span><h2>FPGA 101 Workshop Badge Board<a class="headerlink" href="#fpga-101-workshop-badge-board" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-UP5K</p></li>
+<li><p><strong>Package</strong>: SG48</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/mmicko/workshop_badge">gh:mmicko/workshop_badge</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6014</p></li>
+<li><p><strong>Description</strong>: Single RS232-HS</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprog</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/FPGA101">board/FPGA101 ✗</a></p></li>
+</ul>
+</section>
+<section id="glasgow-revc">
+<span id="boards-glasgow-revc"></span><h2>Glasgow revC<a class="headerlink" href="#glasgow-revc" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX8K</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/GlasgowEmbedded/glasgow">https://github.com/GlasgowEmbedded/glasgow</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Glasgow-revC">board/Glasgow-revC ✗</a></p></li>
+</ul>
+</section>
+<section id="hx4k-pmod-breakout">
+<span id="boards-hx4k-pmod"></span><h2>HX4K PMOD Breakout<a class="headerlink" href="#hx4k-pmod-breakout" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE-HX4K</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/rschlaikjer/hx4k-pmod">https://github.com/rschlaikjer/hx4k-pmod</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/HX4K-PMOD">board/HX4K-PMOD ✗</a></p></li>
+</ul>
+</section>
+<section id="ice40-feather-r0-2">
+<span id="boards-ice40-feather-r0-2"></span><h2>iCE40 Feather r0.2<a class="headerlink" href="#ice40-feather-r0-2" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-UP5K</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/joshajohnson/iCE40-feather">https://github.com/joshajohnson/iCE40-feather</a></p></li>
+<li><p><a class="reference external" href="https://www.pcbway.com/project/gifts_detail/iCE40_Feather.html">https://www.pcbway.com/project/gifts_detail/iCE40_Feather.html</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>iceprog</p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCE40-feather-r0.2">board/iCE40-feather-r0.2 ✗</a></p></li>
+</ul>
+</section>
+<section id="ice40-hx8k-breakout-board">
+<span id="boards-ice40-hx8k"></span><h2>iCE40-HX8K Breakout Board<a class="headerlink" href="#ice40-hx8k-breakout-board" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX8K</p></li>
+<li><p><strong>Package</strong>: CT256</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/iCE40HX8KBreakoutBoard">http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/iCE40HX8KBreakoutBoard</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6010</p></li>
+<li><p><strong>Description</strong>: Lattice FTUSB Interface Cable</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprog</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">ice40_generic</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: AS</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCE40-HX8K">board/iCE40-HX8K</a></p>
+<ul>
+<li><p><strong>PCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCE40-HX8K/constraints.pcf">constraints</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="ice40-ultraplus-breakout-board">
+<span id="boards-ice40-up"></span><h2>iCE40 UltraPlus Breakout Board<a class="headerlink" href="#ice40-ultraplus-breakout-board" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-UP5K</p></li>
+<li><p><strong>Package</strong>: SG48</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="http://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/iCE40UltraPlusBreakoutBoard">http://www.latticesemi.com/en/Products/DevelopmentBoardsAndKits/iCE40UltraPlusBreakoutBoard</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6010</p></li>
+<li><p><strong>Description</strong>: Lattice iCE40UP5K Breakout</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprog</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">ice40_generic</span></a>]</p>
+<ul>
+<li><p>Memory: NT</p></li>
+<li><p>Flash: AS</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCE40-UP">board/iCE40-UP ✗</a></p></li>
+</ul>
+</section>
+<section id="ice40cw312">
+<span id="boards-ice40cw312"></span><h2>iCE40CW312<a class="headerlink" href="#ice40cw312" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-UP5K</p></li>
+<li><p><strong>Package</strong>: UWG30</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/newaetech/chipwhisperer-target-cw308t/tree/main/CW312T_ICE40UP">gh:newaetech/chipwhisperer-target-cw308t/CW312T_ICE40UP</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCE40CW312">board/iCE40CW312</a></p>
+<ul>
+<li><p><strong>PCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCE40CW312/SPI.user.pcf">SPI » user</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCE40CW312/UART.pcf">UART</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCE40CW312/GPIO.input.pcf">GPIO » input</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCE40CW312/GPIO.output.pcf">GPIO » output</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCE40CW312/constraints.pcf">constraints</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="olimex-ice40hx1k-evb">
+<span id="boards-ice40hx1k-evb"></span><h2>Olimex iCE40HX1K-EVB<a class="headerlink" href="#olimex-ice40hx1k-evb" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX1K</p></li>
+<li><p><strong>Package</strong>: VQ100</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.olimex.com/Products/FPGA/iCE40/iCE40HX1K-EVB/open-source-hardware">https://www.olimex.com/Products/FPGA/iCE40/iCE40HX1K-EVB/open-source-hardware</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 2341:8036</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprogduino</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">ice40_generic</span></a>]</p>
+<ul>
+<li><p>Memory: NT</p></li>
+<li><p>Flash: AS</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCE40HX1K-EVB">board/iCE40HX1K-EVB ✗</a></p></li>
+</ul>
+</section>
+<section id="olimex-ice40hx8k-evb">
+<span id="boards-ice40hx8k-evb"></span><h2>Olimex iCE40HX8K-EVB<a class="headerlink" href="#olimex-ice40hx8k-evb" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX8K</p></li>
+<li><p><strong>Package</strong>: CT256</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.olimex.com/Products/FPGA/iCE40/iCE40HX8K-EVB/open-source-hardware">https://www.olimex.com/Products/FPGA/iCE40/iCE40HX8K-EVB/open-source-hardware</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 2341:8036</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprogduino</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">ice40_generic</span></a>]</p>
+<ul>
+<li><p>Memory: NT</p></li>
+<li><p>Flash: AS</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCE40HX8K-EVB">board/iCE40HX8K-EVB ✗</a></p></li>
+</ul>
+</section>
+<section id="iceblink40-hx1k-evaluation-kit">
+<span id="boards-iceblink40-hx1k"></span><h2>iCEblink40-HX1K Evaluation Kit<a class="headerlink" href="#iceblink40-hx1k-evaluation-kit" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX1K</p></li>
+<li><p><strong>Package</strong>: VQ100</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="http://www.latticesemi.com/iCEblink40-HX1K">http://www.latticesemi.com/iCEblink40-HX1K</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 1443:0007</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iCEburn</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCEblink40-HX1K">board/iCEblink40-HX1K ✗</a></p></li>
+</ul>
+</section>
+<section id="icebreaker">
+<span id="boards-icebreaker"></span><h2>iCEBreaker<a class="headerlink" href="#icebreaker" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-UP5K</p></li>
+<li><p><strong>Package</strong>: SG48</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/icebreaker-fpga/icebreaker">gh:icebreaker-fpga/icebreaker</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6010</p></li>
+<li><p><strong>Description</strong>: Dual RS232-HS</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprog</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">ice40_generic</span></a>]</p>
+<ul>
+<li><p>Memory: NA</p></li>
+<li><p>Flash: AS</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCEBreaker">board/iCEBreaker</a></p>
+<ul>
+<li><p><strong>PCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCEBreaker/TWI.pcf">TWI</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCEBreaker/GPIO.Button.pcf">GPIO » Button</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCEBreaker/SPI.user.pcf">SPI » user</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCEBreaker/UART.pcf">UART</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCEBreaker/SPI.onboard.pcf">SPI » onboard</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCEBreaker/GPIO.input.pcf">GPIO » input</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCEBreaker/GPIO.output.pcf">GPIO » output</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCEBreaker/GPIO.TriLED.pcf">GPIO » TriLED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCEBreaker/constraints.pcf">constraints</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="icebreaker-bitsy-v0">
+<span id="boards-icebreaker-bitsy-v0"></span><h2>iCEBreaker bitsy v0<a class="headerlink" href="#icebreaker-bitsy-v0" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-UP5K</p></li>
+<li><p><strong>Package</strong>: SG48</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/icebreaker-fpga/icebreaker">gh:icebreaker-fpga/icebreaker</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 1d50:6146</p></li>
+<li><p><strong>Description</strong>: iCEBreaker bitsy v0</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>dfu-util</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">icebreaker-bitsy</span></a>]</p>
+<ul>
+<li><p>Memory: NA</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCEBreaker-bitsy-v0">board/iCEBreaker-bitsy-v0 ✗</a></p></li>
+</ul>
+</section>
+<section id="icebreaker-bitsy-v1">
+<span id="boards-icebreaker-bitsy-v1"></span><h2>iCEBreaker bitsy v1<a class="headerlink" href="#icebreaker-bitsy-v1" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-UP5K</p></li>
+<li><p><strong>Package</strong>: SG48</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/icebreaker-fpga/icebreaker">gh:icebreaker-fpga/icebreaker</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 1d50:6146</p></li>
+<li><p><strong>Description</strong>: iCEBreaker bitsy v1</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>dfu-util</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">icebreaker-bitsy</span></a>]</p>
+<ul>
+<li><p>Memory: NA</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCEBreaker-bitsy-v1">board/iCEBreaker-bitsy-v1 ✗</a></p></li>
+</ul>
+</section>
+<section id="icecream-1-0">
+<span id="boards-icecream-1-0"></span><h2>ICECREAM-1.0<a class="headerlink" href="#icecream-1-0" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX1K</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="http://www.ele.uva.es/~jesus/ICECREAM/index.html">http://www.ele.uva.es/~jesus/ICECREAM/index.html</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>LPC1112</p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ICECREAM-1.0">board/ICECREAM-1.0 ✗</a></p></li>
+</ul>
+</section>
+<section id="icecream-1-2">
+<span id="boards-icecream-1-2"></span><h2>ICECREAM-1.2<a class="headerlink" href="#icecream-1-2" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX4K</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="http://www.ele.uva.es/~jesus/ICECREAM/index.html">http://www.ele.uva.es/~jesus/ICECREAM/index.html</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>LPC1112</p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ICECREAM-1.2">board/ICECREAM-1.2 ✗</a></p></li>
+</ul>
+</section>
+<section id="icefun">
+<span id="boards-icefun"></span><h2>iceFUN<a class="headerlink" href="#icefun" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX8K</p></li>
+<li><p><strong>Package</strong>: CB132</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.robot-electronics.co.uk/icefun.html">https://www.robot-electronics.co.uk/icefun.html</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 04d8:ffee</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>icefunprog</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iceFUN">board/iceFUN ✗</a></p></li>
+</ul>
+</section>
+<section id="icestick-evaluation-kit">
+<span id="boards-icestick"></span><h2>iCEstick Evaluation Kit<a class="headerlink" href="#icestick-evaluation-kit" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX1K</p></li>
+<li><p><strong>Package</strong>: TQ144</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="http://www.latticesemi.com/icestick">http://www.latticesemi.com/icestick</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6010</p></li>
+<li><p><strong>Description</strong>: Lattice FTUSB Interface Cable</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprog</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">ice40_generic</span></a>]</p>
+<ul>
+<li><p>Memory: NA</p></li>
+<li><p>Flash: AS</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceStick">board/IceStick</a></p>
+<ul>
+<li><p><strong>PCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceStick/GPIO.LED.pcf">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceStick/PMOD.pcf">PMOD</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceStick/Clock.SystemClock.pcf">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceStick/FTDI.Port1.pcf">FTDI » Port1</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceStick/FTDI.Port0.pcf">FTDI » Port0</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceStick/GPIO.Bottom.pcf">GPIO » Bottom</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceStick/GPIO.Top.pcf">GPIO » Top</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceStick/Transceiver.IrDA.pcf">Transceiver » IrDA</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceStick/constraints.pcf">constraints</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="icesugar-nano">
+<span id="boards-icesugar-nano"></span><h2>iCESugar-nano<a class="headerlink" href="#icesugar-nano" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-LP1K</p></li>
+<li><p><strong>Package</strong>: CM36</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/wuxx/icesugar-nano">https://github.com/wuxx/icesugar-nano</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 1d50:602b</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>icesprog</p></li>
+<li><p>DAPLink</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCESugar-nano">board/iCESugar-nano ✗</a></p></li>
+</ul>
+</section>
+<section id="icesugar-pro">
+<span id="boards-icesugar-pro"></span><h2>iCESugar-pro<a class="headerlink" href="#icesugar-pro" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ECP5-25F</p></li>
+<li><p><strong>Package</strong>: BGA256</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/wuxx/icesugar-pro">https://github.com/wuxx/icesugar-pro</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>DAPLink</p></li>
+<li><p>FT2232</p></li>
+<li><p>USB-Blaster</p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCESugar-pro">board/iCESugar-pro ✗</a></p></li>
+</ul>
+</section>
+<section id="icesugar-v1-5">
+<span id="boards-icesugar-v1-5"></span><h2>iCESugar v1.5<a class="headerlink" href="#icesugar-v1-5" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-UP5K</p></li>
+<li><p><strong>Package</strong>: SG48</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/wuxx/icesugar">https://github.com/wuxx/icesugar</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 1d50:602b</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>icesprog</p></li>
+<li><p>DAPLink</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCESugar-v1.5">board/iCESugar-v1.5</a></p>
+<ul>
+<li><p><strong>PCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/iCESugar-v1.5/constraints.pcf">constraints</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="icezero">
+<span id="boards-icezero"></span><h2>IceZero<a class="headerlink" href="#icezero" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX4K</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://shop.trenz-electronic.de/en/TE0876-02-A-IceZero-with-Lattice-ICE40HX-4-MBit-external-SRAM-5.6-x-3.05-cm">https://shop.trenz-electronic.de/en/TE0876-02-A-IceZero-with-Lattice-ICE40HX-4-MBit-external-SRAM-5.6-x-3.05-cm</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceZero">board/IceZero ✗</a></p></li>
+</ul>
+</section>
+<section id="icezum-alhambra">
+<span id="boards-icezumalhambra"></span><h2>IceZUM Alhambra<a class="headerlink" href="#icezum-alhambra" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX1K</p></li>
+<li><p><strong>Package</strong>: TQ144</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/FPGAwars/icezum">https://github.com/FPGAwars/icezum</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6010</p></li>
+<li><p><strong>Description</strong>: IceZUM Alhambra</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprog</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceZumAlhambra">board/IceZumAlhambra</a></p>
+<ul>
+<li><p><strong>PCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceZumAlhambra/constraints.pcf">constraints</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="icezum-alhambra-ii">
+<span id="boards-icezumalhambraii"></span><h2>IceZUM Alhambra II<a class="headerlink" href="#icezum-alhambra-ii" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX4K</p></li>
+<li><p><strong>Package</strong>: TQ144</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/FPGAwars/Alhambra-II-FPGA">https://github.com/FPGAwars/Alhambra-II-FPGA</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6010</p></li>
+<li><p><strong>Description</strong>: Alhambra II</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprog</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">ice40_generic</span></a>]</p>
+<ul>
+<li><p>Memory: NT</p></li>
+<li><p>Flash: AS</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceZumAlhambraII">board/IceZumAlhambraII</a></p>
+<ul>
+<li><p><strong>PCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceZumAlhambraII/GPIO.LED.pcf">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceZumAlhambraII/Clock.SystemClock.pcf">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceZumAlhambraII/FTDI.Port1.pcf">FTDI » Port1</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceZumAlhambraII/Bus.I2C.ADC.pcf">Bus » I2C » ADC</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceZumAlhambraII/FTDI.Port0.pcf">FTDI » Port0</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceZumAlhambraII/GPIO.Bottom.pcf">GPIO » Bottom</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceZumAlhambraII/GPIO.Buttons.pcf">GPIO » Buttons</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceZumAlhambraII/GPIO.Top.pcf">GPIO » Top</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/IceZumAlhambraII/constraints.pcf">constraints</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="icoboard-v1-0">
+<span id="boards-icoboard-v1-0"></span><h2>icoBOARD v1.0<a class="headerlink" href="#icoboard-v1-0" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX8K</p></li>
+<li><p><strong>Package</strong>: CT256</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="http://icoboard.org/about-icoboard.html">http://icoboard.org/about-icoboard.html</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>icoprog</p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/icoBOARD-v1.0">board/icoBOARD-v1.0 ✗</a></p></li>
+</ul>
+</section>
+<section id="kc705">
+<span id="boards-kc705"></span><h2>KC705<a class="headerlink" href="#kc705" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Part Number</strong>: EK-K7-KC705-G</p></li>
+<li><p><strong>Device</strong>: XC7K325T-2</p></li>
+<li><p><strong>Package</strong>: FFG900C</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.xilinx.com/products/boards-and-kits/ek-k7-kc705-g.html">https://www.xilinx.com/products/boards-and-kits/ek-k7-kc705-g.html</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">kc705</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: NT</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705">board/KC705</a></p>
+<ul>
+<li><p><strong>UCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/Bus.LCDisplay.ucf">Bus » LCDisplay</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/Clock.SystemClock.ucf">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/Bus.IIC.ucf">Bus » IIC</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/Clock.Si5324.ucf">Clock » Si5324</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/GPIO.Button.Cursor.ucf">GPIO » Button » Cursor</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/USB_UART.ucf">USB_UART</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/Clock.ProgUserClock.ucf">Clock » ProgUserClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/Bus.PMBus.ucf">Bus » PMBus</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/GPIO.LED.ucf">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/GPIO.Button.Special.ucf">GPIO » Button » Special</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/Transceiver.SMA.ucf">Transceiver » SMA</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/Default.ucf">Default</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/EthernetPHY.RGMII.ucf">EthernetPHY » RGMII</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/GPIO.Switch.ucf">GPIO » Switch</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/EthernetPHY.ucf">EthernetPHY</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/Transceiver.SFP.ucf">Transceiver » SFP</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/EthernetPHY.GMII.ucf">EthernetPHY » GMII</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/GPIO.SMA.ucf">GPIO » SMA</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/EthernetPHY.SGMII.ucf">EthernetPHY » SGMII</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/GPIO.Rotary.ucf">GPIO » Rotary</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/FanControl.ucf">FanControl</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/Transceiver.SMA_RefClock.ucf">Transceiver » SMA_RefClock</a></p></li>
+</ul>
+</li>
+<li><p><strong>XDC</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/GPIO.Rotary.xdc">GPIO » Rotary</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/Transceiver.SFP.xdc">Transceiver » SFP</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/GPIO.Switch.xdc">GPIO » Switch</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/GPIO.SMA.xdc">GPIO » SMA</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/Bus.IIC.xdc">Bus » IIC</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/FanControl.xdc">FanControl</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/Clock.ProgUserClock.xdc">Clock » ProgUserClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/GPIO.Button.Cursor.xdc">GPIO » Button » Cursor</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/GPIO.LED.xdc">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/GPIO.Button.Special.xdc">GPIO » Button » Special</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/Clock.SystemClock.xdc">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/KC705/USB_UART.xdc">USB_UART</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="kefir-i-ice40-hx4k">
+<span id="boards-kefir"></span><h2>Kéfir I iCE40-HX4K<a class="headerlink" href="#kefir-i-ice40-hx4k" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX4K</p></li>
+<li><p><strong>Package</strong>: TQ144</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="http://fpgalibre.sourceforge.net/Kefir/">http://fpgalibre.sourceforge.net/Kefir/</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6010</p></li>
+<li><p><strong>Description</strong>: Milk JTAG:u</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprog</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Kefir">board/Kefir ✗</a></p></li>
+</ul>
+</section>
+<section id="litefury">
+<span id="boards-litefury"></span><h2>Litefury<a class="headerlink" href="#litefury" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: XC7A100T-L2</p></li>
+<li><p><strong>Package</strong>: FGG484E</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/RHSResearchLLC/NiteFury-and-LiteFury">https://github.com/RHSResearchLLC/NiteFury-and-LiteFury</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Litefury">board/Litefury ✗</a></p></li>
+</ul>
+</section>
+<section id="manila-ice">
+<span id="boards-manila-ice"></span><h2>manila iCE<a class="headerlink" href="#manila-ice" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX4K</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/joshtyler/manila-ice">https://github.com/joshtyler/manila-ice</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/manila-iCE">board/manila-iCE ✗</a></p></li>
+</ul>
+</section>
+<section id="mercury-2-a7-100t">
+<span id="boards-mercury2-a7-100t"></span><h2>Mercury 2 A7-100T<a class="headerlink" href="#mercury-2-a7-100t" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Package</strong>: XC7A100T</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.micro-nova.com/mercury-2">https://www.micro-nova.com/mercury-2</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Mercury2-A7-100T">board/Mercury2-A7-100T ✗</a></p></li>
+</ul>
+</section>
+<section id="mercury-2-a7-35t">
+<span id="boards-mercury2-a7-35t"></span><h2>Mercury 2 A7-35T<a class="headerlink" href="#mercury-2-a7-35t" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Package</strong>: XC7A35T</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.micro-nova.com/mercury-2">https://www.micro-nova.com/mercury-2</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Mercury2-A7-35T">board/Mercury2-A7-35T ✗</a></p></li>
+</ul>
+</section>
+<section id="ml505">
+<span id="boards-ml505"></span><h2>ML505<a class="headerlink" href="#ml505" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505">board/ML505</a></p>
+<ul>
+<li><p><strong>UCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/Bus.LCDisplay.ucf">Bus » LCDisplay</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/Clock.SystemClock.ucf">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/Bus.PS2.Mouse.ucf">Bus » PS2 » Mouse</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/Clock.SMA.ucf">Clock » SMA</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/GPIO.LED.Error.ucf">GPIO » LED » Error</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/GPIO.Button.Cursor.ucf">GPIO » Button » Cursor</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/GPIO.LED.Cursor.ucf">GPIO » LED » Cursor</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/GPIO.LED.ucf">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/GPIO.Button.Special.ucf">GPIO » Button » Special</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/Transceiver.SMA.ucf">Transceiver » SMA</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/Bus.PS2.Keyboard.ucf">Bus » PS2 » Keyboard</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/Default.ucf">Default</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/EthernetPHY.RGMII.ucf">EthernetPHY » RGMII</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/GPIO.Switch.ucf">GPIO » Switch</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/EthernetPHY.ucf">EthernetPHY</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/Transceiver.SFP.ucf">Transceiver » SFP</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/EthernetPHY.GMII.ucf">EthernetPHY » GMII</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/Monitor.DVI.Output.ucf">Monitor » DVI » Output</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/UART.ucf">UART</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/Bus.IIC.Main.ucf">Bus » IIC » Main</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/Bus.IIC.Monitor.ucf">Bus » IIC » Monitor</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/EthernetPHY.SGMII.ucf">EthernetPHY » SGMII</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/Clock.UserClock.ucf">Clock » UserClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/GPIO.Rotary.ucf">GPIO » Rotary</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML505/Transceiver.SMA_RefClock.ucf">Transceiver » SMA_RefClock</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="ml506">
+<span id="boards-ml506"></span><h2>ML506<a class="headerlink" href="#ml506" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML506">board/ML506</a></p>
+<ul>
+<li><p><strong>UCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML506/Default.ucf">Default</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="ml605">
+<span id="boards-ml605"></span><h2>ML605<a class="headerlink" href="#ml605" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605">board/ML605</a></p>
+<ul>
+<li><p><strong>UCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/Bus.LCDisplay.ucf">Bus » LCDisplay</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/Clock.SystemClock.ucf">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/Bus.IIC.ucf">Bus » IIC</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/GPIO.Button.Cursor.ucf">GPIO » Button » Cursor</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/USB_UART.ucf">USB_UART</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/Bus.PMBus.ucf">Bus » PMBus</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/GPIO.LED.ucf">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/GPIO.Button.Special.ucf">GPIO » Button » Special</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/Transceiver.SMA.ucf">Transceiver » SMA</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/Default.ucf">Default</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/EthernetPHY.RGMII.ucf">EthernetPHY » RGMII</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/GPIO.Switch.ucf">GPIO » Switch</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/EthernetPHY.ucf">EthernetPHY</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/Transceiver.SFP.ucf">Transceiver » SFP</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/EthernetPHY.GMII.ucf">EthernetPHY » GMII</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/EthernetPHY.SGMII.ucf">EthernetPHY » SGMII</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/Clock.UserClock.ucf">Clock » UserClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/GPIO.Rotary.ucf">GPIO » Rotary</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/FanControl.ucf">FanControl</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ML605/Transceiver.SMA_RefClock.ucf">Transceiver » SMA_RefClock</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="mnt-reform-kintex-7-som">
+<span id="boards-mnt-rkx7"></span><h2>MNT Reform Kintex-7 SoM<a class="headerlink" href="#mnt-reform-kintex-7-som" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: XC7K160T</p></li>
+<li><p><strong>Package</strong>: FFG676</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://source.mnt.re/reform/reform-kintex-som">https://source.mnt.re/reform/reform-kintex-som</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/MNT-RKX7">board/MNT-RKX7 ✗</a></p></li>
+</ul>
+</section>
+<section id="nandland-go-board">
+<span id="boards-nandland-go"></span><h2>Nandland Go board<a class="headerlink" href="#nandland-go-board" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-HX1K</p></li>
+<li><p><strong>Package</strong>: VQ100</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.nandland.com/goboard/introduction.html">https://www.nandland.com/goboard/introduction.html</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6010</p></li>
+<li><p><strong>Description</strong>: Dual RS232-HS</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprog</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nandland-Go">board/Nandland-Go ✗</a></p></li>
+</ul>
+</section>
+<section id="nexys-4">
+<span id="boards-nexys4"></span><h2>Nexys 4<a class="headerlink" href="#nexys-4" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4">board/Nexys4</a></p>
+<ul>
+<li><p><strong>XDC</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4/GPIO.7Segment.xdc">GPIO » 7Segment</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4/GPIO.Switch.xdc">GPIO » Switch</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4/GPIO.LED.RGB.xdc">GPIO » LED » RGB</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4/GPIO.Button.Cursor.xdc">GPIO » Button » Cursor</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4/GPIO.LED.xdc">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4/GPIO.Button.Special.xdc">GPIO » Button » Special</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4/Clock.SystemClock.xdc">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4/Video.VGA.xdc">Video » VGA</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="nexys-4-ddr">
+<span id="boards-nexys4ddr"></span><h2>Nexys 4 DDR<a class="headerlink" href="#nexys-4-ddr" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">nexys_a7_50</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4DDR">board/Nexys4DDR</a></p>
+<ul>
+<li><p><strong>XDC</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4DDR/PMOD.PortA.xdc">PMOD » PortA</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4DDR/EthernetPHY.xdc">EthernetPHY</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4DDR/GPIO.7Segment.xdc">GPIO » 7Segment</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4DDR/EthernetPHY.RMII.xdc">EthernetPHY » RMII</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4DDR/GPIO.Switch.xdc">GPIO » Switch</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4DDR/Bus.IIC.xdc">Bus » IIC</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4DDR/GPIO.LED.RGB.xdc">GPIO » LED » RGB</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4DDR/GPIO.Button.Cursor.xdc">GPIO » Button » Cursor</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4DDR/GPIO.LED.xdc">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4DDR/Bus.QSPIFlash.xdc">Bus » QSPIFlash</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4DDR/Bus.PS2.xdc">Bus » PS2</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4DDR/GPIO.Button.Special.xdc">GPIO » Button » Special</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4DDR/Clock.SystemClock.xdc">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4DDR/USB_UART.xdc">USB_UART</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Nexys4DDR/Video.VGA.xdc">Video » VGA</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="openfpga">
+<span id="boards-openfpga"></span><h2>openFPGA<a class="headerlink" href="#openfpga" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.analogue.co/developer">analogue.co/developer</a></p></li>
+<li><p><a class="reference external" href="https://github.com/joshcampbell191/openfpga-cores-inventory">joshcampbell191/openfpga-cores-inventory</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/openFPGA">board/openFPGA ✗</a></p></li>
+</ul>
+</section>
+<section id="orangecrab-r0-2-25f">
+<span id="boards-orangecrab-r0-2"></span><h2>OrangeCrab-r0.2-25F<a class="headerlink" href="#orangecrab-r0-2-25f" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ECP5-25F</p></li>
+<li><p><strong>Package</strong>: csfBGA285</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/orangecrab-fpga/orangecrab-hardware">https://github.com/orangecrab-fpga/orangecrab-hardware</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 1209:5af0</p></li>
+<li><p><strong>Description</strong>: OrangeCrab r0.2 DFU bootloader</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>openocd</p></li>
+<li><p>dfu-util</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">orangeCrab</span></a>]</p>
+<ul>
+<li><p>Memory: OK (JTAG)</p></li>
+<li><p>Flash: OK (DFU)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/OrangeCrab-r0.2">board/OrangeCrab-r0.2</a></p>
+<ul>
+<li><p><strong>LPF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/OrangeCrab-r0.2/constraints.lpf">constraints</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="pergola">
+<span id="boards-pergola"></span><h2>Pergola<a class="headerlink" href="#pergola" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ECP5-12F</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/pergola-fpga/pergola">https://github.com/pergola-fpga/pergola</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Pergola">board/Pergola ✗</a></p></li>
+</ul>
+</section>
+<section id="picoevb">
+<span id="boards-picoevb"></span><h2>PicoEVB<a class="headerlink" href="#picoevb" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: XC7A50T-2</p></li>
+<li><p><strong>Package</strong>: CSG325C</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/RHSResearchLLC/PicoEVB">https://github.com/RHSResearchLLC/PicoEVB</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/PicoEVB">board/PicoEVB ✗</a></p></li>
+</ul>
+</section>
+<section id="pygmy-stamp-board">
+<span id="boards-pygmy"></span><h2>Pygmy Stamp Board<a class="headerlink" href="#pygmy-stamp-board" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: EOS-S3</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.optimuslogic.in/product_pygmy.html">https://www.optimuslogic.in/product_pygmy.html</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Pygmy">board/Pygmy ✗</a></p></li>
+</ul>
+</section>
+<section id="qomu">
+<span id="boards-qomu"></span><h2>Qomu<a class="headerlink" href="#qomu" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: EOS-S3</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.quicklogic.com/products/eos-s3/qomu-dev-kit/">https://www.quicklogic.com/products/eos-s3/qomu-dev-kit/</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/Qomu">board/Qomu ✗</a></p></li>
+</ul>
+</section>
+<section id="quickfeather">
+<span id="boards-quickfeather"></span><h2>QuickFeather<a class="headerlink" href="#quickfeather" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: EOS-S3</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.quicklogic.com/products/eos-s3/quickfeather-development-kit/">https://www.quicklogic.com/products/eos-s3/quickfeather-development-kit/</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/QuickFeather">board/QuickFeather ✗</a></p></li>
+</ul>
+</section>
+<section id="spartan-3-starter-kit">
+<span id="boards-s3sk"></span><h2>Spartan-3 Starter Kit<a class="headerlink" href="#spartan-3-starter-kit" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/S3SK">board/S3SK</a></p>
+<ul>
+<li><p><strong>UCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/S3SK/uart.ucf">uart</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/S3SK/leds.ucf">leds</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/S3SK/vga.ucf">vga</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/S3SK/buttons.ucf">buttons</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/S3SK/default.ucf">default</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/S3SK/switches.ucf">switches</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="tinyfpga-b2">
+<span id="boards-tinyfpga-b2"></span><h2>TinyFPGA B2<a class="headerlink" href="#tinyfpga-b2" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-LP8K</p></li>
+<li><p><strong>Package</strong>: CM81</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="http://tinyfpga.com/b-series-guide.html">http://tinyfpga.com/b-series-guide.html</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 1209:2100</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>tinyfpgab</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/TinyFPGA-B2">board/TinyFPGA-B2 ✗</a></p></li>
+</ul>
+</section>
+<section id="tinyfpga-bx">
+<span id="boards-tinyfpga-bx"></span><h2>TinyFPGA-BX<a class="headerlink" href="#tinyfpga-bx" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-LP8K</p></li>
+<li><p><strong>Package</strong>: CM81</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/tinyfpga/TinyFPGA-BX">https://github.com/tinyfpga/TinyFPGA-BX</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 1d50:6130</p></li>
+<li><p><strong>Description</strong>: TinyFPGA BX</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>tinyprog</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/TinyFPGA-BX">board/TinyFPGA-BX</a></p>
+<ul>
+<li><p><strong>PCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/TinyFPGA-BX/GPIO.LED.pcf">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/TinyFPGA-BX/USB.pcf">USB</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/TinyFPGA-BX/Clock.SystemClock.pcf">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/TinyFPGA-BX/Bus.SPI.pcf">Bus » SPI</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/TinyFPGA-BX/GPIO.Bottom.pcf">GPIO » Bottom</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/TinyFPGA-BX/GPIO.Right.pcf">GPIO » Right</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/TinyFPGA-BX/GPIO.Left.pcf">GPIO » Left</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/TinyFPGA-BX/constraints.pcf">constraints</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="ulx3s-12f">
+<span id="boards-ulx3s-12f"></span><h2>ULX3S 12F<a class="headerlink" href="#ulx3s-12f" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ECP5-12F</p></li>
+<li><p><strong>Package</strong>: CABGA381</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/emard/ulx3s">https://github.com/emard/ulx3s</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6015</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>fujprog</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">ulx3s</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ULX3S-12F">board/ULX3S-12F ✗</a></p></li>
+</ul>
+</section>
+<section id="ulx3s-25f">
+<span id="boards-ulx3s-25f"></span><h2>ULX3S 25F<a class="headerlink" href="#ulx3s-25f" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ECP5-25F</p></li>
+<li><p><strong>Package</strong>: CABGA381</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/emard/ulx3s">https://github.com/emard/ulx3s</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6015</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>fujprog</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">ulx3s</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ULX3S-25F">board/ULX3S-25F ✗</a></p></li>
+</ul>
+</section>
+<section id="ulx3s-45f">
+<span id="boards-ulx3s-45f"></span><h2>ULX3S 45F<a class="headerlink" href="#ulx3s-45f" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ECP5-45F</p></li>
+<li><p><strong>Package</strong>: CABGA381</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/emard/ulx3s">https://github.com/emard/ulx3s</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6015</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>fujprog</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">ulx3s</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ULX3S-45F">board/ULX3S-45F ✗</a></p></li>
+</ul>
+</section>
+<section id="ulx3s-85f">
+<span id="boards-ulx3s-85f"></span><h2>ULX3S 85F<a class="headerlink" href="#ulx3s-85f" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ECP5-85F</p></li>
+<li><p><strong>Package</strong>: CABGA381</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/emard/ulx3s">https://github.com/emard/ulx3s</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6015</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>fujprog</p></li>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">ulx3s</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: OK</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ULX3S-85F">board/ULX3S-85F ✗</a></p></li>
+</ul>
+</section>
+<section id="upduino-v1-0">
+<span id="boards-upduino-v1-0"></span><h2>UPDuino v1.0<a class="headerlink" href="#upduino-v1-0" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-UP5K</p></li>
+<li><p><strong>Package</strong>: SG48</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/gtjennings1/UPDuino_v1_0">https://github.com/gtjennings1/UPDuino_v1_0</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6014</p></li>
+<li><p><strong>Description</strong>: Single RS232-HS</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprog</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/UPDuino-v1.0">board/UPDuino-v1.0 ✗</a></p></li>
+</ul>
+</section>
+<section id="upduino-v2-0">
+<span id="boards-upduino-v2-0"></span><h2>UPDuino v2.0<a class="headerlink" href="#upduino-v2-0" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-UP5K</p></li>
+<li><p><strong>Package</strong>: SG48</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/gtjennings1/UPDuino_v2_0">https://github.com/gtjennings1/UPDuino_v2_0</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6014</p></li>
+<li><p><strong>Description</strong>: Single RS232-HS</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprog</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/UPDuino-v2.0">board/UPDuino-v2.0 ✗</a></p></li>
+</ul>
+</section>
+<section id="upduino-v2-1">
+<span id="boards-upduino-v2-1"></span><h2>UPDuino v2.1<a class="headerlink" href="#upduino-v2-1" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-UP5K</p></li>
+<li><p><strong>Package</strong>: SG48</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/tinyvision-ai-inc/UPduino-v2.1">https://github.com/tinyvision-ai-inc/UPduino-v2.1</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6014</p></li>
+<li><p><strong>Description</strong>: Single RS232-HS</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprog</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/UPDuino-v2.1">board/UPDuino-v2.1 ✗</a></p></li>
+</ul>
+</section>
+<section id="upduino-v3-0">
+<span id="boards-upduino-v3-0"></span><h2>UPDuino v3.0<a class="headerlink" href="#upduino-v3-0" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: ICE40-UP5K</p></li>
+<li><p><strong>Package</strong>: SG48</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/tinyvision-ai-inc/UPduino-v3.0">https://github.com/tinyvision-ai-inc/UPduino-v3.0</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p><strong>ID</strong>: 0403:6014</p></li>
+<li><p><strong>Description</strong>: UPduino v3.0</p></li>
+<li><p><strong>Tools</strong>:</p>
+<ul>
+<li><p>iceprog</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/UPDuino-v3.0">board/UPDuino-v3.0</a></p>
+<ul>
+<li><p><strong>PCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/UPDuino-v3.0/TWI.pcf">TWI</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/UPDuino-v3.0/SPI.user.pcf">SPI » user</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/UPDuino-v3.0/UART.pcf">UART</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/UPDuino-v3.0/SPI.onboard.pcf">SPI » onboard</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/UPDuino-v3.0/GPIO.input.pcf">GPIO » input</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/UPDuino-v3.0/GPIO.output.pcf">GPIO » output</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/UPDuino-v3.0/GPIO.TriLED.pcf">GPIO » TriLED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/UPDuino-v3.0/constraints.pcf">constraints</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="vc707">
+<span id="boards-vc707"></span><h2>VC707<a class="headerlink" href="#vc707" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Part Number</strong>: EK-V7-VC707-G</p></li>
+<li><p><strong>Device</strong>: XC7VX485T-2</p></li>
+<li><p><strong>Package</strong>: FFG1761</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.xilinx.com/products/boards-and-kits/ek-v7-vc707-g.html">https://www.xilinx.com/products/boards-and-kits/ek-v7-vc707-g.html</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707">board/VC707</a></p>
+<ul>
+<li><p><strong>UCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/Bus.LCDisplay.ucf">Bus » LCDisplay</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/Clock.SystemClock.ucf">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/Bus.IIC.ucf">Bus » IIC</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/GPIO.Button.Cursor.ucf">GPIO » Button » Cursor</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/USB_UART.ucf">USB_UART</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/Clock.ProgUserClock.ucf">Clock » ProgUserClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/Bus.PMBus.ucf">Bus » PMBus</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/GPIO.LED.ucf">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/GPIO.Button.Special.ucf">GPIO » Button » Special</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/Transceiver.SMA.ucf">Transceiver » SMA</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/Default.ucf">Default</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/GPIO.Switch.ucf">GPIO » Switch</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/EthernetPHY.ucf">EthernetPHY</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/Transceiver.SFP.ucf">Transceiver » SFP</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/GPIO.SMA.ucf">GPIO » SMA</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/EthernetPHY.SGMII.ucf">EthernetPHY » SGMII</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/GPIO.Rotary.ucf">GPIO » Rotary</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/FanControl.ucf">FanControl</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/Transceiver.SMA_RefClock.ucf">Transceiver » SMA_RefClock</a></p></li>
+</ul>
+</li>
+<li><p><strong>XDC</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/GPIO.Rotary.xdc">GPIO » Rotary</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/GPIO.Switch.xdc">GPIO » Switch</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/GPIO.SMA.xdc">GPIO » SMA</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/FanControl.xdc">FanControl</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/Clock.ProgUserClock.xdc">Clock » ProgUserClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/GPIO.Button.Cursor.xdc">GPIO » Button » Cursor</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/GPIO.LED.xdc">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/GPIO.Button.Special.xdc">GPIO » Button » Special</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/Clock.SystemClock.xdc">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/VC707/USB_UART.xdc">USB_UART</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="xupv5">
+<span id="boards-xupv5"></span><h2>XUPV5<a class="headerlink" href="#xupv5" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Device</strong>: XC5VLX110T-1</p></li>
+<li><p><strong>Package</strong>: FFG1136</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.xilinx.com/support/university/boards-portfolio/xup-boards/DigilentXUPV5Board.html">https://www.xilinx.com/support/university/boards-portfolio/xup-boards/DigilentXUPV5Board.html</a></p></li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/XUPV5">board/XUPV5</a></p>
+<ul>
+<li><p><strong>UCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/XUPV5/Default.ucf">Default</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="zc706">
+<span id="boards-zc706"></span><h2>ZC706<a class="headerlink" href="#zc706" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Part Number</strong>: EK-Z7-ZC706-G</p></li>
+<li><p><strong>Device</strong>: XC7Z045-2</p></li>
+<li><p><strong>Package</strong>: FFG900</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.xilinx.com/products/boards-and-kits/ek-z7-zc706-g.html">https://www.xilinx.com/products/boards-and-kits/ek-z7-zc706-g.html</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">zc706</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: NA</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706">board/ZC706</a></p>
+<ul>
+<li><p><strong>UCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/Clock.SystemClock.ucf">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/Bus.IIC.ucf">Bus » IIC</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/Clock.SMAClock.ucf">Clock » SMAClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/GPIO.Button.Cursor.ucf">GPIO » Button » Cursor</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/Clock.ProgUserClock.ucf">Clock » ProgUserClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/GPIO.LED.ucf">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/GPIO.Button.Special.ucf">GPIO » Button » Special</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/Default.ucf">Default</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/Transceiver.SFP.ucf">Transceiver » SFP</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/PMOD.Port1.ucf">PMOD » Port1</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/FanControl.ucf">FanControl</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/Transceiver.SMA_RefClock.ucf">Transceiver » SMA_RefClock</a></p></li>
+</ul>
+</li>
+<li><p><strong>XDC</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/Transceiver.SFP.xdc">Transceiver » SFP</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/Bus.IIC.xdc">Bus » IIC</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/Transceiver.SMA_RefClock.xdc">Transceiver » SMA_RefClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/FanControl.xdc">FanControl</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/PMOD.Port1.xdc">PMOD » Port1</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/Clock.ProgUserClock.xdc">Clock » ProgUserClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/GPIO.Button.Cursor.xdc">GPIO » Button » Cursor</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/GPIO.LED.xdc">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/GPIO.Button.Special.xdc">GPIO » Button » Special</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/Clock.SystemClock.xdc">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZC706/Clock.SMAClock.xdc">Clock » SMAClock</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="zedboard">
+<span id="boards-zedboard"></span><h2>ZedBoard<a class="headerlink" href="#zedboard" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Part Number</strong>: AES-Z7EV-7Z020-G</p></li>
+<li><p><strong>Device</strong>: XC7Z020-1</p></li>
+<li><p><strong>Package</strong>: CLG484</p></li>
+<li><p><strong>Documentation</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.xilinx.com/products/boards-and-kits/1-8dyf-11.html">https://www.xilinx.com/products/boards-and-kits/1-8dyf-11.html</a></p></li>
+<li><p><a class="reference external" href="https://store.digilentinc.com/zedboard-zynq-7000-arm-fpga-soc-development-board/">https://store.digilentinc.com/zedboard-zynq-7000-arm-fpga-soc-development-board/</a></p></li>
+</ul>
+</li>
+<li><p><strong>Programming</strong>:</p>
+<ul>
+<li><p>openFPGALoader [<a class="reference external" href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html#compatibility-boards" title="(in openFPGALoader: universal utility for programming FPGA vlatest)"><span class="xref std std-ref">zedboard</span></a>]</p>
+<ul>
+<li><p>Memory: OK</p></li>
+<li><p>Flash: NA</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Constraints</strong>: <a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZedBoard">board/ZedBoard</a></p>
+<ul>
+<li><p><strong>UCF</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZedBoard/Clock.SystemClock.ucf">Clock » SystemClock</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZedBoard/PMOD.PortC.ucf">PMOD » PortC</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZedBoard/GPIO.Button.Cursor.ucf">GPIO » Button » Cursor</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZedBoard/PMOD.PortB.ucf">PMOD » PortB</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZedBoard/GPIO.LED.ucf">GPIO » LED</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZedBoard/Default.ucf">Default</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZedBoard/GPIO.Switch.ucf">GPIO » Switch</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZedBoard/PMOD.PortD.ucf">PMOD » PortD</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hdl/constraints/blob/main/board/ZedBoard/PMOD.PortA.ucf">PMOD » PortA</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../ProgDebug.html" class="btn btn-neutral float-left" title="Programming and debugging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Devices.html" class="btn btn-neutral float-right" title="Devices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-2022 The HDL Authors.
+      <span class="lastupdated">Last updated on 2024.03.28.
+      </span></p>
+  </div>Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/buildthedocs/sphinx.theme">theme</a>
+    provided by <a href="https://buildthedocs.github.io">Build the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
