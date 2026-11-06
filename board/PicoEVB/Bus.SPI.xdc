@@ -1,0 +1,11 @@
+set_property PACKAGE_PIN K16 [get_ports {PicoEVB_SPI_IO[0]}]
+set_property PACKAGE_PIN L17 [get_ports {PicoEVB_SPI_IO[1]}]
+set_property PACKAGE_PIN J15 [get_ports {PicoEVB_SPI_IO[2]}]
+set_property PACKAGE_PIN J16 [get_ports {PicoEVB_SPI_IO[3]}]
+set_property PACKAGE_PIN L15 [get_ports {PicoEVB_SPI_SS}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {PicoEVB_SPI_IO[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {PicoEVB_SPI_IO[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {PicoEVB_SPI_IO[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {PicoEVB_SPI_IO[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {PicoEVB_SPI_SS}]
