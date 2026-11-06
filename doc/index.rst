@@ -12,7 +12,7 @@ The FPGA Board Constraints Documentation
 
     <br>
 
-.. centered:: |SHIELD:svg:gh:hdl:constraints| |SHIELD:svg:gh:hdl:packages| |SHIELD:svg:gh:hdl:awesome| |SHIELD:svg:Reports-gitter|
+.. centered:: |SHIELD:svg:gh:hdl:constraints| |SHIELD:svg:gh:hdl:packages| |SHIELD:svg:gh:hdl:awesome|
 
 Hardware Description Language (HDL) designs prototyped on FPGAs are constrained by the devices and interfaces available
 on the development boards.

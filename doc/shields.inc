@@ -27,13 +27,3 @@
    :alt: hdl/awesome on github
    :height: 22
    :target: https://github.com/hdl/awesome
-
-
-.. |SHIELD:svg:Reports-gitter| image:: https://img.shields.io/badge/chat-on%20gitter-4db797.svg?longCache=true&style=flat-square&logo=gitter&logoColor=e8ecef
-   :alt: Documentation License
-   :height: 22
-   :target: https://gitter.im/hdl/community
-.. |SHIELD:png:Reports-gitter| image:: https://raster.shields.io/badge/chat-on%20gitter-4db797.svg?longCache=true&style=flat-square&logo=gitter&logoColor=fff
-   :alt: Documentation License
-   :height: 22
-   :target: https://gitter.im/hdl/community
