@@ -54,16 +54,14 @@ ctx = ROOT / 'context.json'
 if ctx.is_file():
 	html_context.update(loads(ctx.open('r').read()))
 
-if (ROOT / "_theme").is_dir():
-	html_theme_path = ["."]
-	html_theme = "_theme"
-	html_theme_options = {
-		'logo_only': True,
-		'home_breadcrumbs': False,
-		'vcs_pageview_mode': 'blob',
-	}
-else:
-	html_theme = "alabaster"
+html_theme = "furo"
+
+html_theme_options = {
+    "source_repository": "https://github.com/hdl/constraints",
+    "source_branch": "main",
+    "source_directory": "doc",
+    "sidebar_hide_name": True,
+}
 
 html_static_path = ['_static']
 
